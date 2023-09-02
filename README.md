@@ -8,7 +8,7 @@
 <h1 align="center">Software Development Project Portfolio</h1>
 
 <p>
-    Welcome to my software development project repository! Here, you'll find a collection of projects I've completed in groups or alone during my university studies in Information Systems Engineering at Universidad Tecnológica Nacional, Facultad Regional Buenos Aires.
+   Welcome to my software development project repository! Here, you'll discover a compilation of projects I've undertaken, both independently and collaboratively, during my academic journey in Information Systems Engineering at Universidad Tecnológica Nacional, Facultad Regional Buenos Aires.
 </p>
 <p>The utilized programming languages are the following: C++, C, Haskell, Wollok, Prolog, HTML, CSS.</p>
 
@@ -42,3 +42,9 @@ Throughout these projects, I've gained valuable insights in:
 If you have any questions or simply want to connect, feel free to reach out to me via lamas.chabela@gmail.com.
 
 Thanks for exploring my project portfolio! 🌟
+
+
+<img src="https://www.flaticon.com/svg/static/icons/svg/25/25657.svg" width="20" height="20"> www.linkedin.com/in/chabela-maría-lamas-0801b828b
+
+
+
