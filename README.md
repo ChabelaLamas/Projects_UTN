@@ -28,20 +28,20 @@ Exploration of various programming paradigms through exercises and hands-on impl
 
 ## 🧠 Lessons Learned
 
-Throughout these projects, I've gained valuable insights in:
+Throughout these projects, I've acquired valuable experience in:
 
-- Technologies such as C++, C, Haskell, Wollok, Prolog, HTML, CSS.
-- Complex problem-solving.
-- Collaboration in development teams.
-- OOP including polymorphism, inheritance, encapsulation, composition and abstraction.
-- Functional and logical paradigm.
-- Unit tests
+- Utilizing various technologies including C++, C, Haskell, Wollok, Prolog, HTML, and CSS.
+- Navigating complex problem-solving scenarios.
+- Collaborating effectively within development teams.
+- Applying Object-Oriented Programming (OOP) principles, encompassing polymorphism, inheritance, encapsulation, composition, and abstraction.
+- Embracing both the functional and logical programming paradigms.
+- Conducting comprehensive unit testing.
 
 ## 📬 Contact
 
 If you have any questions or simply want to connect, feel free to reach out to me via lamas.chabela@gmail.com.
 
-Thanks for exploring my project portfolio! 🌟
+Thanks for exploring my project portfolio! :bulb:
 
 <a href="https://www.linkedin.com/in/chabela-maría-lamas-0801b828b">
   <img src="https://www.linkedin.com/favicon.ico" width="20" height="20" alt="LinkedIn Icon">
