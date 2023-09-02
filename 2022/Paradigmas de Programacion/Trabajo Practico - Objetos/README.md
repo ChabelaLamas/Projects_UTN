@@ -8,5 +8,5 @@ Pueden encontrar el enunciado del trabajo práctico [acá](https://docs.google.c
 
 Se espera que desarrollen lo indicado en cada punto en el archivo `src/modelo.wlk` y las pruebas correspondientes en `src/pruebas.wtest`.
 
-Y no olviden editar este `README` con los nombres de cada integrante :smile:
+
 
