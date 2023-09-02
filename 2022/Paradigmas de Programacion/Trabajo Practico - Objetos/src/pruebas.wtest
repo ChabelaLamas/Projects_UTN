@@ -1,0 +1,192 @@
+import modelo.*
+
+
+const academia = new Academia (cocineros = #{}, recetario = #{}, experienciaMaxima = 10)
+
+const cocineroSinPreparaciones = new Cocinero(preparaciones=[], nivelDeAprendizaje = principiante, academia = academia)
+const ratatouille = new Cocinero(preparaciones=[hamburguesa, hamburguesa], nivelDeAprendizaje = principiante, academia = academia)
+const cocineroExperimentado = new Cocinero(preparaciones=[pizza, pizza, pizza], nivelDeAprendizaje = experimentado, academia = academia)
+const cocineroChef = new Cocinero(preparaciones=[pizza, pizza, pizza], nivelDeAprendizaje = chef, academia = academia)
+
+const rhamburguesa= new Receta(ingredientes=#{"tomate", "queso", "pan", "lechuga", "cebolla"} , nivelDificultad= 4)
+const hamburguesa = new Comida(receta= rhamburguesa, calidad= pobre)
+
+const rpizza = new Receta(ingredientes=#{"tomate", "queso", "pan"} , nivelDificultad = 6)
+const pizza = new Comida(receta= rpizza, calidad= normal)
+const pizzaS = new Comida(receta= rpizza, calidad= new Superior (plus = 10))
+
+const rlaPepo = new Receta(ingredientes=#{"tomate", "queso", "pan", "lechuga"} , nivelDificultad = 7)
+const laPepo = new Comida(receta= rlaPepo, calidad= normal)
+
+const respecialDelDia = new Receta(ingredientes=#{"tomate", "queso", "pan", "huevo", "papa", "leche", "carne"} , nivelDificultad = 10)
+const especialDelDia = new Comida(receta= respecialDelDia, calidad= normal)
+
+const rarrozGourmet = new RecetaGourmet(ingredientes=#{"arroz", "queso", "ketchup"}, nivelDificultad = 6)
+const rarroz = new Receta(ingredientes=#{"arroz", "queso", "ketchup"}, nivelDificultad = 6)
+
+const rsopa= new Receta(ingredientes=#{"queso", "caldo"} , nivelDificultad= 2)
+
+describe "Calidades de la comida" {
+
+	test "una comida de calidad pobre aporta como experiencia el minimo entre la experiencia minima y el valor para este tipo de comida" {
+		assert.equals(hamburguesa.experiencia(academia), 10)
+	}
+	
+	test "una comida de calidad normal aporta como experiencia el producto entre la cantidad de ingredientes y el nivel de dificultad de la receta" {
+		assert.equals(pizza.experiencia(academia), 18)
+	}
+
+	test "una comida de calidad superior aporta como experiencia el la suma entre su plus y la experiencia que tendria si fuera de calidad normal" {
+		assert.equals(pizzaS.experiencia(academia), 28)
+	}
+}
+
+describe "Punto 1: Calculos de experiencia" {
+
+	test "la experiencia de un cocinero sin preparaciones es nula" {
+		assert.equals(0, cocineroSinPreparaciones.experiencia())
+	}
+	
+	test "la experiencia de un cocinero es la suma de la experiencia de sus preparaciones" {
+		assert.equals(20, ratatouille.experiencia())
+	}
+	
+	test "la experiencia minima de una receta son la cantidad de ingredientes por el nivel de dificultad" {
+		assert.equals(20, rhamburguesa.experienciaAportada())
+	}
+}
+
+describe "Punto 2: Superar niveles de aprendizaje" {
+
+	test "un principiante no puede preparar una comida dificil" {
+		assert.throwsExceptionWithType(new NoPuedePrepararComida(message = "Debido a su nivel, no puede preparar esta comida"), 
+			{cocineroSinPreparaciones.preparar(rpizza)}
+		)
+	}
+	
+	test "un principiante supero su nivel si consiguio mas de 100 de experiencia" {
+		ratatouille.preparar(rhamburguesa)
+		ratatouille.preparar(rhamburguesa)
+		ratatouille.preparar(rhamburguesa)
+		ratatouille.preparar(rhamburguesa)
+		ratatouille.preparar(rhamburguesa)
+		ratatouille.preparar(rhamburguesa)
+		ratatouille.preparar(rhamburguesa)
+		ratatouille.preparar(rhamburguesa)
+		ratatouille.preparar(rhamburguesa)
+		assert.equals(experimentado, ratatouille.nivelDeAprendizaje())
+		
+	}
+	
+	test "un experimentado puede preparar una receta dificil si es similar a una que ya preparo" {
+		cocineroExperimentado.preparar(rlaPepo)
+		const recetasPreparadas = cocineroExperimentado.preparaciones().map{preparacion => preparacion.receta()}
+		assert.that(recetasPreparadas.contains(rlaPepo))
+	}
+	
+	test "un experimentado supero su nivel si preparo mas de 5 recetas dificiles" {
+		cocineroExperimentado.preparar(rlaPepo)
+		cocineroExperimentado.preparar(rlaPepo)
+		cocineroExperimentado.preparar(rlaPepo)
+		assert.equals(chef, cocineroExperimentado.nivelDeAprendizaje())
+	}
+	
+	test "un chef puede preparar todo tipo de recetas" {
+		cocineroChef.preparar(rhamburguesa)
+		cocineroChef.preparar(rlaPepo)
+		cocineroChef.preparar(respecialDelDia)
+		const recetasPreparadas = cocineroChef.preparaciones().map{preparacion => preparacion.receta()}
+		assert.that(recetasPreparadas.contains(rhamburguesa))
+		assert.that(recetasPreparadas.contains(rlaPepo))
+		assert.that(recetasPreparadas.contains(respecialDelDia))
+	}
+}
+
+describe "Punto 3: Preparar una comida a partir de una receta" {
+
+	test "un principiante prepara una comida con una receta no dificil pero no supera su nivel" {
+		cocineroSinPreparaciones.preparar(rsopa)
+		assert.notThat(cocineroSinPreparaciones.nivelDeAprendizaje()==experimentado)
+	}
+	test "un principiante prepara una comida con una receta no dificil y se suma a su lista de preparaciones" {
+		cocineroSinPreparaciones.preparar(rsopa)
+		assert.equals([rsopa],cocineroSinPreparaciones.preparaciones().map({c => c.receta()}))
+	}
+	
+	test "un experimentado prepara una comida con una receta dificil pero no supera su nivel" {
+		cocineroExperimentado.preparar(rlaPepo)
+		assert.notThat(cocineroExperimentado.nivelDeAprendizaje()==chef)
+	}
+	test "un experimentado prepara una comida con una receta dificil y se suma a su lista de preparaciones" {
+		cocineroExperimentado.preparar(rlaPepo)
+		const recetas = cocineroExperimentado.preparaciones().map({c => c.receta()})
+		assert.equals(rlaPepo,recetas.last())
+	}
+
+	test "un experimentado prepara una comida de nivel Superior y su experiencia es la correspondiente" {
+		cocineroExperimentado.preparar(rpizza)
+		const comida = cocineroExperimentado.preparaciones().last()
+		assert.equals(18.3,comida.experiencia(academia))
+	}
+	test "un chef prepara una comida con una receta dificil y se suma a su lista de preparaciones" {
+		cocineroChef.preparar(respecialDelDia)
+		const recetas = cocineroChef.preparaciones().map({c => c.receta()})
+		assert.equals(respecialDelDia,recetas.last())
+	}
+	test "un chef prepara una comida de nivel Superior y su experiencia es la correspondiente" {
+		cocineroChef.preparar(rpizza)
+		const comida = cocineroChef.preparaciones().last()
+		assert.equals(18.3,comida.experiencia(academia))
+	}	
+}
+
+describe "Punto 4: Recetas Gourmet" {
+
+	test "un principiante no puede preparar receta gourmet" {
+				
+		assert.throwsExceptionWithType(new NoPuedePrepararComida(message = "Debido a su nivel, no puede preparar esta comida"), 
+			{cocineroSinPreparaciones.preparar(rarrozGourmet)}
+		)
+	}
+	
+	test "la experiencia de una receta gourmet es el doble que de una normal(misma cantidad de ingredientes y dificultad)" {
+		cocineroChef.preparar(rarrozGourmet)
+		const expArrozGourmet = cocineroChef.preparaciones().last().experiencia(academia)
+		cocineroChef.preparar(rarroz)
+		const expArroz = cocineroChef.preparaciones().last().experiencia(academia)
+		assert.equals(expArrozGourmet, expArroz * 2)
+	}
+}
+
+
+describe "Punto 5: Entrenamiento de Estudiantes" {
+
+	test "la academia entrena a un experimentado y lo vuelve chef" {
+		academia.cocineros().add(cocineroExperimentado)
+		academia.recetario().add(rlaPepo)
+		academia.entrenarCocineros()
+		academia.entrenarCocineros()
+		academia.entrenarCocineros()
+		assert.equals(chef, cocineroExperimentado.nivelDeAprendizaje())
+	}
+	test "la academia entena a un principiante y a un chef, y el principiante realizo una receta acorde a su nivel y a la mayor experiencia que le aporta" {
+		academia.cocineros().add(cocineroSinPreparaciones)
+		academia.cocineros().add(cocineroChef)
+		academia.recetario().add(rlaPepo)
+		academia.recetario().add(rsopa)
+		academia.recetario().add(rhamburguesa)
+		academia.entrenarCocineros()		
+		
+		assert.that(cocineroSinPreparaciones.preparaciones().size()== 1  && cocineroSinPreparaciones.preparaciones().map({c => c.receta()}) == [rhamburguesa]) 
+	}
+	test "la academia entena a un principiante y a un chef, y el chef realizo una receta acorde a su nivel y a la mayor experiencia que le aporta" {
+		academia.cocineros().add(cocineroSinPreparaciones)
+		academia.cocineros().add(cocineroChef)
+		academia.recetario().add(rlaPepo)
+		academia.recetario().add(rsopa)
+		academia.recetario().add(rhamburguesa)
+		academia.entrenarCocineros()		
+		
+		assert.that(cocineroChef.preparaciones().size()== 4  && (cocineroChef.preparaciones().map({c => c.receta()})).last() == rlaPepo) 
+	}
+}
