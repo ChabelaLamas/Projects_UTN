@@ -14,7 +14,7 @@
 
 <!-- Visual Representation -->
 <p align="center">
-    ![image](https://github.com/ChabelaLamas/Proyects_UTN/assets/143890347/420b62ad-4f44-4c83-bc92-099f3b7150d0)
+    <img src="[https://media.licdn.com/dms/image/C4E16AQFIcY1M-woYyw/profile-displaybackgroundimage-shrink_350_1400/0/1654784927186?e=1696464000&v=beta&t=djEM9Ghhiaz7Fgw_XF-8TZoh6lRZ7guvg_bsM6L19Ko](https://today.cofc.edu/wp-content/uploads/2019/08/SystemsEngineering-slider-01-copy.jpg)" alt="Software Development Projects">
 
 </p>
 
