@@ -8,7 +8,7 @@
 <h1 align="center">Software Development Project Portfolio</h1>
 
 <p>
-   Welcome to my software development project repository! Here, you'll discover a compilation of projects I've undertaken, both independently and collaboratively, during my academic journey in Information Systems Engineering at Universidad Tecnológica Nacional, Facultad Regional Buenos Aires.
+   Welcome to my software development project repository! Here, you'll discover a compilation of projects I've undertaken, both independently and collaboratively, during my academic journey in Information Systems Engineering at Universidad Tecnológica Nacional, Facultad Regional Buenos Aires (UTN FRBA).
 </p>
 <p>The utilized programming languages are the following: C++, C, Haskell, Wollok, Prolog, HTML, CSS.</p>
 
