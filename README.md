@@ -41,7 +41,7 @@ Throughout these projects, I've acquired valuable experience in:
 
 If you have any questions or simply want to connect, feel free to reach out to me via lamas.chabela@gmail.com.
 
-Thanks for exploring my project portfolio! :bulb:
+:bulb: Thanks for exploring my project portfolio! :bulb:
 
 <a href="https://www.linkedin.com/in/chabela-maría-lamas-0801b828b">
   <img src="https://www.linkedin.com/favicon.ico" width="20" height="20" alt="LinkedIn Icon">
