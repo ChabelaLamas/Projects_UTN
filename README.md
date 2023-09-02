@@ -47,7 +47,7 @@ If you have any questions or simply want to connect, feel free to reach out to m
   <img src="https://www.linkedin.com/favicon.ico" width="20" height="20" alt="LinkedIn Icon">
 </a>
 <a href="mailto:lamas.chabela@gmail.com">
-  <img src="https://img.icons8.com/office/16/000000/email.png" width="20" height="20" alt="Email Icon">
+  <img src="https://cdn-icons-png.flaticon.com/256/281/281769.png" width="20" height="20" alt="Email Icon">
 
 </a>
 
