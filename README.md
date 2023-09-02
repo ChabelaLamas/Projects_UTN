@@ -23,7 +23,7 @@
 ### <a href="https://github.com/damiangluk/proyectos_materias_utn/tree/main/2023/sistemas_operativos">Operating system with C on Linux<a>
 The project entails a system comprising five interconnected modules connected through sockets, simulating the execution of processes within an actual operating system.
 
-### <a href="https://github.com/damiangluk/proyectos_materias_utn/tree/main/2022/paradigmas_de_programacion">OOP, Functional and Logical paradigm<a>
+### <a href="https://github.com/ChabelaLamas/Projects_UTN/tree/main/2022/Paradigmas%20de%20Programacion">OOP, Functional and Logical paradigm<a>
 Exploration of various programming paradigms through exercises and hands-on implementations, which provided me with a profound insight into how each paradigm tackles problem-solving and software design
 
 ## 🧠 Lessons Learned
