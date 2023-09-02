@@ -1,7 +1,7 @@
 # Proyects_UTN
 <!-- Last Updated Note -->
 <p align="right">
-    <em>Last updated: August 9, 2023</em>
+    <em>Last updated: September 2, 2023</em>
 </p>
 
 <!-- Header -->
@@ -43,6 +43,6 @@ Throughout these projects, I've gained valuable insights in:
 
 ## 📬 Contact
 
-If you have any questions or simply want to connect, feel free to reach out to me via damigluk@gmail.com.
+If you have any questions or simply want to connect, feel free to reach out to me via lamas.chabela@gmail.com.
 
 Thanks for exploring my project portfolio! 🌟
