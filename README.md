@@ -47,7 +47,7 @@ Thanks for exploring my project portfolio! 🌟
   <img src="https://www.linkedin.com/favicon.ico" width="20" height="20" alt="LinkedIn Icon">
 </a>
 <a href="mailto:lamas.chabela@gmail.com">
-  <img src="[https://www.flaticon.com/svg/static/icons/svg/25/25657.svg](https://img.icons8.com/office/16/000000/email.png)https://img.icons8.com/office/16/000000/email.png" width="20" height="20" alt="Email Icon">
+  <img src="https://img.icons8.com/office/16/000000/email.png" width="20" height="20" alt="Email Icon">
 
 </a>
 
