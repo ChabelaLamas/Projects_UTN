@@ -43,8 +43,10 @@ If you have any questions or simply want to connect, feel free to reach out to m
 
 Thanks for exploring my project portfolio! 🌟
 
+<a href="https://www.linkedin.com/in/chabela-maría-lamas-0801b828b">
+  <img src="https://www.linkedin.com/favicon.ico" width="20" height="20" alt="LinkedIn Icon">
+</a>
 
-<img src="https://www.flaticon.com/svg/static/icons/svg/25/25657.svg" width="20" height="20"> www.linkedin.com/in/chabela-maría-lamas-0801b828b
 
 
 
