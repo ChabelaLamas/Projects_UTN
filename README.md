@@ -46,7 +46,9 @@ Thanks for exploring my project portfolio! 🌟
 <a href="https://www.linkedin.com/in/chabela-maría-lamas-0801b828b">
   <img src="https://www.linkedin.com/favicon.ico" width="20" height="20" alt="LinkedIn Icon">
 </a>
-
+<a href="mailto:lamas.chabela@gmail.com">
+  <img src="https://www.flaticon.com/svg/static/icons/svg/25/25657.svg" width="20" height="20" alt="Email Icon">
+</a>
 
 
 
