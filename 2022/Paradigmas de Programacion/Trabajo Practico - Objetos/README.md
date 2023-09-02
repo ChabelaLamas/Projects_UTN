@@ -1,13 +1,5 @@
 # TP Integrador - Paradigma Orientado a Objetos 2022
 
-Integrantes:
-
-- Lamas, Chabela 
-- Gluk, Damian
-- Bursztyn, Alan
-- Chuquichambi Cruz, Nancy
-- Ladrero, María Laura
-
 ## Consignas
 
 Este trabajo tiene consignas abiertas con la intención de que tomen decisiones sobre el diseño de la solución. También tiene las dimensiones y complejidad que podrían encontrar en un parcial, con lo cual debería servir para prepararse para lo que se viene :muscle:
