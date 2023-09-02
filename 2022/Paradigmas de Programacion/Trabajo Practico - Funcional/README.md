@@ -3,7 +3,7 @@
 
 ## Consignas
 
-Este trabajo, a diferencia de los anteriores, tiene consignas abiertas con la intención de que tomen decisiones respecto a los tipos de datos y funciones a desarrollar. También tiene las dimensiones y complejidad similares a las de un parcial, con lo cual debería servir para prepararse para lo que se viene :muscle:
+Este trabajo, a diferencia de los anteriores, tiene consignas abiertas con la intención de que tomen decisiones respecto a los tipos de datos y funciones a desarrollar. También tiene las dimensiones y complejidad.
 
 Pueden encontrar el enunciado del trabajo práctico en formato PDF en la raíz de este repositorio.
 
