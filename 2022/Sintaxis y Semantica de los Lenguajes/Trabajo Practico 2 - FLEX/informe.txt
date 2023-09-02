@@ -1,0 +1,143 @@
+ -> Identificadores hallados: 
+
+	- Agregar: Aparece 2 veces
+	- SSL: Aparece 2 veces
+	- Zombie: Aparece 1 vez
+	- _: Aparece 1 vez
+	- __: Aparece 1 vez
+	- __Hola__: Aparece 1 vez
+	- anaconda: Aparece 1 vez
+	- main: Aparece 3 veces
+	- paraguas: Aparece 1 vez
+	- zombie: Aparece 1 vez
+
+------------------------------------------------------------------------
+ -> Literales cadenas hallados: 
+
+	- "\n": Tiene longitud 2
+	- "\'": Tiene longitud 2
+	- "\"": Tiene longitud 2
+	- "'B'": Tiene longitud 3
+	- "\algo": Tiene longitud 5
+	- "\"Buenas": Tiene longitud 8
+	- "Que onda": Tiene longitud 8
+	- "Hola Mundo": Tiene longitud 10
+	- "Chau Mundo": Tiene longitud 10
+	- "Pasas De Uva": Tiene longitud 12
+	- "Hola Mundoooooo": Tiene longitud 15
+
+------------------------------------------------------------------------
+ -> Palabras Reservadas halladas: 
+
+	- sizeof: Palabra reservada de tipo Otras
+	- int: Palabra reservada de tipo Dato
+	- char: Palabra reservada de tipo Dato
+	- sizeof: Palabra reservada de tipo Otras
+
+------------------------------------------------------------------------
+ -> Constantes enteras octal halladas:
+
+	- 0 --> Constante de valor decimal: 0
+	- 010 --> Constante de valor decimal: 8
+	- 077 --> Constante de valor decimal: 63
+	- 0123 --> Constante de valor decimal: 83
+	- 0 --> Constante de valor decimal: 0
+	- 07 --> Constante de valor decimal: 7
+
+------------------------------------------------------------------------
+ -> Constantes enteras decimal halladas:
+
+	- Constante decimal de valor: 1
+	- Constante decimal de valor: 2
+	- Constante decimal de valor: 5
+	- Constante decimal de valor: 3
+	- Constante decimal de valor: 17
+	- Constante decimal de valor: 17
+	- Constante decimal de valor: 20
+
+	Total sumado: 65
+
+------------------------------------------------------------------------
+ -> Constantes enteras hexadecimal halladas:
+
+	- 0x1f --> Constante de valor decimal: 31
+	- 0xf --> Constante de valor decimal: 15
+	- 0xf --> Constante de valor decimal: 15
+	- 0xf --> Constante de valor decimal: 15
+	- 0x1f --> Constante de valor decimal: 31
+
+------------------------------------------------------------------------
+ -> Constantes real halladas:
+
+	- 0.150000	 Parte entera: 0	 Parte decimal: 0.150000
+	- 92.363468	 Parte entera: 92	 Parte decimal: 0.363468
+	- 40.300000	 Parte entera: 40	 Parte decimal: 0.300000
+	- 40.300000	 Parte entera: 40	 Parte decimal: 0.300000
+	- 50.800000	 Parte entera: 50	 Parte decimal: 0.800000
+	- 90.900000	 Parte entera: 90	 Parte decimal: 0.900000
+	- 25.500000	 Parte entera: 25	 Parte decimal: 0.500000
+	- 90.000000	 Parte entera: 90	 Parte decimal: 0.000000
+	- 40.300000	 Parte entera: 40	 Parte decimal: 0.300000
+	- 0.400000	 Parte entera: 0	 Parte decimal: 0.400000
+
+------------------------------------------------------------------------
+ -> Constantes caracter halladas:
+
+	- 1) 'a'
+	- 2) 'L'
+	- 3) 'B'
+	- 4) 'F'
+	- 5) 'a'
+
+------------------------------------------------------------------------
+ -> Operadores/caracteres de puntuacion hallados: 
+
+	- , Aparece 2 veces
+	- . Aparece 1 vez
+	- + Aparece 1 vez
+	- - Aparece 1 vez
+	- ( Aparece 1 vez
+	- ; Aparece 2 veces
+	- || Aparece 1 vez
+	- / Aparece 1 vez
+
+------------------------------------------------------------------------
+ -> Comentarios hallados: 
+
+
+- Comentario de una linea:
+// Hola Mundo
+
+
+- Comentario de una linea:
+// Hi!
+
+
+- Comentario de varias lineas:
+/* Me pica la cabeza !!
+":'("*/
+
+
+- Comentario de varias lineas:
+/*
+Agregar
+Saracatunga
+*/
+
+
+- Comentario de varias lineas:
+/*
+Esto se puso
+picante
+*/
+
+
+- Comentario de una linea:
+// Prueba
+
+
+------------------------------------------------------------------------
+ -> Caracteres no reconocidos hallados: 
+
+	- $ Ubicado en la linea 18
+	- $ Ubicado en la linea 88
