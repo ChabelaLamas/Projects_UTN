@@ -1,4 +1,1 @@
-Curso: K3571 (Lucas, Luciano), K3573 (Joaquín), K3673 (Chabela)
-Numero de grupo: 14
-Integrantes: Affre, Lucas Gabriel - 2026363; Carriquiry Castro, Joaquín - 2026703; Lamas, Chabela María - 2027148; Sangroni, Luciano Gabriel - 2040440
-Email responsable: clamas@frba.utn.edu.ar
+Trabajo práctico de la materia Gestión de Datos, cursada segundo cuatrimestre 2023. Los integrantes son: Affre, Lucas Gabriel; Carriquiry Castro, Joaquín; Lamas, Chabela María; Sangroni, Luciano Gabriel. La consigna se encuentra en la presente carpeta.
