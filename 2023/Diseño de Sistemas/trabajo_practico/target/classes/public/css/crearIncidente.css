@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.seccion-selectores {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicio-selector-container {
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.servicio-selector {
+    padding: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: white;
+    border: white;
+    font-size: 1rem;
+    background-color: #0CC0DF;
+}
+
+.comunidad-selector-container {
+    flex-basis: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.seccion-selectores h2 {
+    margin-left: 7rem;
+    color: #7E7B7B;
+    font-family: 'Cabin';
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.comunidad-select-container {
+    margin-left: 2rem;
+    width: 3rem;
+    height: 2rem;
+    position: relative;
+    background-color: #0CC0DF;
+    border-radius: 30%;
+    border: white;
+}
+
+.comunidad-selector {
+    width: 100%;
+    height: 100%;
+    background-color: #0CC0DF;
+    opacity: 0;
+    color: white;
+    position: absolute;
+}
+
+.comunidad-selector-container .linea-blanca {
+    height: 1%;
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    left: 25%;
+}
+
+.comunidad-selector-container .uno {
+    top: 40%;
+}
+
+.comunidad-selector-container .dos {
+    top: 60%;
+}
+
+.separador {
+    height: 1px;
+    background-color: grey;
+    margin: 0px 0px 50px 0px;
+}
+
+.servicio-selector-container {
+    margin-top: 10px; /* Ajusta el margen según sea necesario */
+}
+
+/* Estilo para el select de prestaciones */
+.prestacion-selector {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.prestacion-selector:hover,
+.prestacion-selector:focus {
+    border-color: #007BFF; /* Cambia el color del borde al pasar el ratón o enfocar el elemento */
+}
+
+/* Estilo para las opciones del select de prestaciones */
+.prestacion-option {
+    padding: 10px;
+}
+
+
+/**/
+
+.form {
+    width: 40%;
+    text-align: left;
+    margin: auto;
+}
+
+label {
+    margin-bottom: 15px;
+}
+
+h3 {
+    color:#0CC0DF;
+    width: 40%;
+    text-align: left;
+    margin: auto auto 40px auto;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid grey;
+    margin-bottom: 40px;
+}
+
+div {
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    max-width: 100%;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 40px;
+}
+
+button {
+    width:100%;
+    padding: 10px 20px;
+    background-color: #0CC0DF;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+    }
+}

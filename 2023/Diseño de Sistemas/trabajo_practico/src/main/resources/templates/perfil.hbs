@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/estiloGeneral.css">
+    <link rel="stylesheet" href="css/perfilPersona.css">
+    <link rel="stylesheet" href="css/cargaMasiva.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <title>Perfil</title>
+</head>
+
+<body class="bodyInterno centrado">
+
+<!-- HEADER -->
+<header>
+    <div class="menu-container" style="margin-left: 52px">
+        <ul class="menu">
+                    {{#each menus}}
+                        {{#if this.activo}}
+                            <li class="paginaActual" ><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{else}}
+                            <li><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{/if}}
+                    {{/each}}
+        </ul>
+        <img src="img/logo.png" alt="logo-header">
+    </div>
+
+    <a href="#" id="cerrarSesionLink">
+      <div class="cerrar-sesion-icon">
+        <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+      </div>
+    </a>
+</header>
+{{#if mensajeCambiosAplicados}}
+<h2>{{mensajeCambiosAplicados}}</h2>
+{{/if}}
+<div class="sostenedor_de_campos">
+    <div class="campo" data-campo="nombre">
+        <label>Nombre:</label>
+        <div class="campo-editable">
+            {{persona.usuario.nombre}}
+        </div>
+    </div>
+
+    <div class="campo" data-campo="email">
+        <label>Email:</label>
+        <div class="campo-editable">
+        {{#if persona.email}}
+            {{persona.email}}
+        {{else}}
+            Sin mail definido.
+        {{/if}}
+        </div>
+    </div>
+
+    <div class="campo" data-campo="telefono">
+        <label>Teléfono:</label>
+        <div class="campo-editable">
+            {{#if persona.telefono}}
+                {{persona.telefono}}
+            {{else}}
+            Sin teléfono definido.
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="campo" data-campo="localidad">
+        <label>Localidad:</label>
+        <div class="campo-editable">
+            {{#if persona.localidad}}
+                {{persona.localidad.nombre}} - {{persona.localidad.localizacion.nombre}}
+            {{else}}
+            Sin localidad definida.
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="campo" data-campo="localidad">
+        <label>Medio de notificación:</label>
+        <div class="campo-editable">
+            {{#if persona.preferenciaMedioNotificacion}}
+                {{persona.preferenciaMedioNotificacion}}
+            {{else}}
+                Sin preferencia definida.
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="campo" data-campo="localidad">
+        <label>Frecuencia de notificación:</label>
+        <div class="campo-editable">
+        {{#if personaFrecuencia}}
+            {{personaFrecuencia}}
+        {{else}}
+            Sin frecuencia definida.
+        {{/if}}
+        </div>
+    </div>
+
+    <div class="campo" data-campo="frecuencias">
+        <label>Horarios:</label>
+        <div class="campo-editable">
+            {{#if horariosDisponibilidad}}
+                {{horariosDisponibilidad}}
+            {{else}}
+            Sin horarios definidos.
+            {{/if}}
+        </div>
+    </div>
+
+    <a href="/perfil/editar" class="boton cargarDatos">Editar</a>
+
+    {{#if esAdmin}}
+    <a href="/crear-administrador" class="boton crearAdmin">Crear nuevo administrador</a>
+        {{/if}}
+</div>
+
+
+<script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/perfil.js"></script>
+<script src="js/cerrarSesion.js"></script>
+
+</body>
+</html>

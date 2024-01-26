@@ -1,0 +1,374 @@
+.sostenedor_de_campos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Cabin';
+    font-size: 16px;
+    font-weight: 400;
+    color: #767676;
+    margin-top: 100px;
+}
+
+
+.campo {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.save-button {
+    display: none;
+    background-color: #007BFF;
+    border: none;
+    color: #FFF;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.secondary-button {
+    background-color: #007BFF;
+    border: none;
+    color: #FFF;
+    padding: 0px;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.label-container {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    min-width: 120px;
+}
+
+.campo-editable {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.input-text {
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    max-width: calc(100% - 60px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+/* horarios */
+.horarios-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.etiqueta-horario {
+    background-color: #0CC0DF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.dropdown {
+    top: 50%; //Centra verticalmente
+left: 50%; //Centra horizontalmente
+transform: translate(-50%, -50%); //Desplaza el dropdown hacia arriba y hacia la izquierda en un 50% de su propio tamaño.
+position: absolute;
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content {
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content a {
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+.add-btn {
+    background-color: transparent;
+    border: 3px solid black;;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.add-btn:hover .dropdown {
+    display: block;
+}
+
+
+/*horarios*/
+
+.eliminar-horario {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 2px 5px;
+}
+.edit-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+
+.campo.editando .input-text {
+    background-color: white;
+    cursor: text;
+}
+
+
+.input-select {
+    width: 75%;
+    padding: 5px;
+    border: none;
+    outline:transparent ;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #06697a;
+}
+
+.campo-editable .guardar {
+    width: 80px;
+    height: 40px;
+    background-color: #0CC0DF;
+}
+
+.lapiz {
+
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s, border-radius 0.2s;
+    border-radius: 8px;
+}
+
+.sostenedor_de_botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-align: center;
+    font-family: 'Cabin';
+    font-size: 16px;
+    font-weight: 400;
+    color: #767676;
+    margin-top: 100px;
+
+}
+
+.grupo {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.boton_seleccionador {
+    flex-shrink: 0;
+    border-radius: 0px;
+    align-items: flex-start;
+    background-color: #BEBEBE;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Cabin';
+    font-size: 18px;
+    font-weight: 100;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 10px;
+    gap: 10px;
+    padding: 10px 20px;
+    backdrop-filter: blur(2px);
+    transition: background-color 0.3s ease;
+}
+
+
+.boton_seleccionado {
+    background-color: #0CC0DF;
+}
+
+/*Intentando que sea responsive*/
+
+
+
+.sostenedor_de_campos, .sostenedor_de_botones {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5%;
+}
+
+.campo {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.label-container, .campo-editable {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.edit-button {
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+
+@media (min-width: 768px) {
+    .campo {
+        width: 600px;
+        flex-direction: row;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .label-container, .campo-editable {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+    }
+
+    label {
+        margin-right: 20px;
+        margin-bottom: 0;
+        width: auto;
+        text-align: left;
+    }
+
+    .edit-button {
+        align-self: auto;
+        margin-top: 0;
+    }
+}
+
+.grupo {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boton_seleccionador {
+    margin-bottom: 10px;
+    max-width: 90%;
+}
+
+@media (min-width: 768px) {
+    .boton_seleccionador {
+        width: 200px;
+        margin-right: 10px;
+    }
+}
+
+.campo[data-campo="localidad"] {
+    margin-bottom: 30px;
+}
+
+.sostenedor_de_botones p {
+    margin-bottom: 20px;
+}
+
+.botonsote{
+    margin: 16px;
+    background-color: #0CC0DF;
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Cabin';
+    font-size: 20px;
+    font-weight: 500;
+    gap: 10px;
+    padding: 15px;
+    backdrop-filter: blur(2px);
+    flex-direction: row; /* Establecer la dirección de flex a "row" */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 150px;
+}
+.alineacion{
+    float: right;
+}

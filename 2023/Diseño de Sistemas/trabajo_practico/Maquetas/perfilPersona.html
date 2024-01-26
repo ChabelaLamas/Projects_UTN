@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles/estiloChatty.css">
+    <link rel="stylesheet" href="styles/perfilPersona.css"> 
+    
+    <meta charset="utf-8">
+    <title>Editar Perfil Persona</title>
+  </head>
+  
+  <body class="bodyInterno centrado">
+
+     <!-- HEADER -->
+      <header>
+            <div class="menu-container" style="margin: auto 0;">
+              <ul class="menu" style="margin-left: 40px;">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li class="paginaActual"> <a href="perfilPersona.html"> Configuración </a></li>
+                <li><a href="listarIncidentes.html">Incidentes</a></li>
+                <li><a href="listarComunidades.html">Comunidades</a></li>
+                <li><a href="rankings.html">Ranking</a></li>
+              </ul>
+              <img src="img/logo.png" alt="logo-header">
+            </div>
+      </header>
+      
+      <div class="sostenedor_de_campos">
+        <div class="campo" data-campo="nombre">
+            <label for="nombre">Nombre:</label>
+            <div class="campo-editable">
+                <span class="input-text">Ejemplo Nombre</span>
+                <button class="edit-button lapiz"><i class="fas fa-pencil-alt"></i></button>
+                <button class="save-button boton guardar">Guardar</button>
+            </div>
+        </div>
+    
+        <div class="campo" data-campo="email">
+            <label for="email">Email:</label>
+            <div class="campo-editable">
+                <span class="input-text">ejemplo@email.com</span>
+                <button class="edit-button lapiz"><i class="fas fa-pencil-alt"></i></button>
+                <button class="save-button boton guardar">Guardar</button>
+            </div>
+        </div>
+    
+        <div class="campo" data-campo="telefono">
+            <label for="telefono">Teléfono:</label>
+            <div class="campo-editable">
+                <span class="input-text">123-456-7890</span>
+                <button class="edit-button lapiz"><i class="fas fa-pencil-alt"></i></button>
+                <button class="save-button boton guardar">Guardar</button>
+            </div>
+        </div>
+    
+        <div class="campo" data-campo="localidad">
+          <label for="localidad">Localidad:</label>
+          <div class="campo-editable">
+        
+              <select class="input-select">
+                  <option value="Localidad1">Localidad1</option>
+                  <option value="Localidad2">Localidad2</option>
+                  <option value="Localidad3">Localidad3</option>
+              </select>
+            <!--  <button class="save-button">Guardar</button> -->
+          </div>
+      </div>
+    </div>
+
+    <div class="sostenedor_de_botones">
+      <p>Elige la forma de recibir notificaciones</p>
+      <div class="grupo" id="grupo1">
+        <button class="boton_seleccionador">Telefono</button>
+        <button class="boton_seleccionador">Email</button>
+    </div>
+    <div class="grupo" id="grupo2">
+        <button class="boton_seleccionador">Cuando sucede</button>
+        <button class="boton_seleccionador">Sin apuros</button>
+    </div>
+     
+  
+    <p style="margin-top: 25px;">Horarios para recibir notificaciones sin apuros</p>
+  <div class="horarios-container">
+    <div class="horarios-seleccionados"></div>
+    <button class="add-btn" onclick="toggleDropdown()">
+        +
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a href="#" data-horario="08:00">08:00</a>
+                <a href="#" data-horario="09:00">09:00</a>
+                <a href="#" data-horario="10:00">10:00</a>
+            </div>
+        </div>
+    </button>
+  </div>
+
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/editarPerfil.js"></script>
+
+  </body>
+</html>

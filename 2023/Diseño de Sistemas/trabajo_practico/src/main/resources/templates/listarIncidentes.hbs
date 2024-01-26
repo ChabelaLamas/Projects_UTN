@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/estiloGeneral.css">
+    <link rel="stylesheet" href="css/listarIncidentes.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Listado de Incidentes</title>
+</head>
+
+<body class="bodyInterno centrado">
+
+<header>
+    <div class="menu-container">
+        <ul class="menu">
+                    {{#each menus}}
+                        {{#if this.activo}}
+                            <li class="paginaActual"><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{else}}
+                            <li><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{/if}}
+                    {{/each}}
+        </ul>
+        <img src="img/logo.png" alt="logo-header">
+    </div>
+    <a href="#" id="cerrarSesionLink">
+          <div class="cerrar-sesion-icon">
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+          </div>
+        </a>
+</header>
+
+<div class="seccion-selectores">
+    <div class="estado-selector-container">
+        <select class="estado-selector" id="estado-selector">
+            <option value="AMBOS" selected>Ambos</option>
+            <option value="ABIERTO">Abierto</option>
+            <option value="CERRADO">Cerrado</option>
+        </select>
+    </div>
+
+    <div class="comunidad-selector-container">
+        <h2 id="comunidadSeleccionadaTexto">Todas las comunidades</h2>
+        <div class="comunidad-select-container">
+            <select class="comunidad-selector">
+                <option value="todas" selected>Todas</option>
+                {{#each comunidades}}
+                    <option value="{{this.nombre}}">{{this.nombre}}</option>
+                {{/each}}
+            </select>
+            <div class="uno linea-blanca"></div>
+            <div class="dos linea-blanca"></div>
+        </div>
+    </div>
+</div>
+
+<div class="separador"></div>
+
+<div class="seccion-tarjetas">
+    {{#if incidentes}}
+        {{#each incidentes}}
+            <div class = "incidente" data-comunidad="{{this.comunidad.nombre}}" data-incidente-id="{{this.id}}">
+                 Denominación: <span class="denominacion">{{this.denominacion}}</span><br>
+                 Prestación: <span class="prestacion">{{this.prestacion.servicio.descripcion}} en {{this.prestacion.establecimiento.denominacion}} de {{this.prestacion.establecimiento.entidad.denominacion}}</span><br>
+                 Horario de publicación: <span class="fechaApertura">{{this.fechaApertura}}</span><br>
+                 Observaciones: <span class="observaciones">{{this.observaciones}}</span><br>
+                 {{#if this.abierto}}
+                    Estado: <span class="estado">ABIERTO</span>
+                    <a class="btn-close" href="/incidentes/cerrar/{{this.id}}">X</a>
+                 {{else}}
+                    Estado: <span class="estado">CERRADO</span>
+                 {{/if}}
+
+            </div>
+        {{/each}}
+    {{/if}}
+</div>
+
+<a href="incidentes/crear" class="btn-add">+</a>
+
+<script src="js/listarIncidentes.js"></script>
+<script src="js/cerrarSesion.js"></script>
+<script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

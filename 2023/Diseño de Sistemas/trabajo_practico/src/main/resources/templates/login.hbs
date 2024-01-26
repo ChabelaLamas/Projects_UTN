@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Iniciar Sesion</title>
+</head>
+<body>
+<div class="logo_container">
+    <img class="logo" src="img/logo.png" alt="logo-header">
+</div>
+<div class="login_container">
+    <h2>Iniciar Sesión</h2>
+    <form method="POST" onsubmit="return validarFormularioInicio()" action="/login">
+        <div class="input_container">
+            <input id="usuarioInput" name="nombre" type="text" placeholder="Usuario" required>
+        </div>
+        <div class="input_container">
+            <input id="contraseniaInput" name="contrasenia" type="password" placeholder="Contraseña" required>
+        </div>
+        {{#if errorMessage}}
+            <p class="error_login">{{errorMessage}}</p>
+        {{/if}}
+        <button type="submit" class="boton posicionBotonIniciarSesion">
+            Iniciar Sesión
+        </button>
+
+    </form>
+
+    <a class="texto2" href="/signup">* Crear usuario</a>
+</div>
+<script src="js/inicioSesion.js"></script>
+</body>
+</html>

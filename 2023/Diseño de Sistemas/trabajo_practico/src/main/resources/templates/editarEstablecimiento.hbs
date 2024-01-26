@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloGeneral.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/crearEstablecimientos.css">
+    <meta charset="utf-8">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <title>Administrar</title>
+</head>
+
+<body class="bodyInterno centrado">
+
+<!-- HEADER -->
+<header>
+    <div class="menu-container">
+        <ul class="menu">
+                    {{#each menus}}
+                        {{#if this.activo}}
+                            <li class="paginaActual"><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{else}}
+                            <li><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{/if}}
+                    {{/each}}
+        </ul>
+        <img src="../img/logo.png" alt="logo-header">
+    </div>
+    <a href="#" id="cerrarSesionLink">
+          <div class="cerrar-sesion-icon">
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+          </div>
+    </a>
+    <a href="#" id="atrasLink">
+          <div class="atras-icon">
+             <i class="fa-solid fa-arrow-left" style="color: #ff4db5;"></i>
+          </div>
+    </a>
+</header>
+
+<div>
+     <h1 class="titulosMedianos">Editar Establecimiento</h1>
+</div>
+
+<form id="formCrear">
+       <label for="denominacion">Denominación:</label>
+       <input type="text" id="denominacion" value="{{establecimiento.denominacion}}" required>
+
+       <label for="entidad">Entidad:</label>
+       <select id="entidad" required>
+           {{#each entidades}}
+                {{#if this.pertenece}}
+                     <option value="{{this.id}}" selected>{{this.denominacion}}</option>
+                {{else}}
+                     <option value="{{this.id}}">{{this.denominacion}}</option>
+                {{/if}}
+
+           {{/each}}
+       </select>
+
+       <label for="localidad">Localidad:</label>
+       <select id="localidad" required>
+           {{#each localidades}}
+           {{#if this.pertenece}}
+                <option value="{{this.id}}" selected>{{this.nombre}}</option>
+           {{else}}
+                <option value="{{this.id}}">{{this.nombre}}</option>
+           {{/if}}
+
+           {{/each}}
+       </select>
+
+
+
+
+      <input type="hidden" id="establecimientoId" value="{{establecimiento.id}}">
+
+     <button type="button" onclick="guardarEstablecimiento()">Guardar</button>
+    </form>
+
+
+<script src="../js/editarEstablecimiento.js"></script>
+<script src="../js/cerrarSesion.js"></script>
+<script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/estiloGeneral.css">
+    <link rel="stylesheet" href="../css/crearIncidente.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <title>Nuevo Incidente</title>
+</head>
+
+<body class="bodyInterno centrado">
+
+<!-- HEADER -->
+<header>
+    <div class="menu-container">
+        <ul class="menu">
+            {{#each menus}}
+                {{#if this.activo}}
+                    <li class="paginaActual"><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                {{else}}
+                    <li><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                {{/if}}
+            {{/each}}
+        </ul>
+        <img src="../img/logo.png" alt="logo-header">
+    </div>
+    <a href="#" id="cerrarSesionLink">
+          <div class="cerrar-sesion-icon">
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+          </div>
+        </a>
+</header>
+
+    <div class="seccion-selectores">
+
+        <div class="servicio-selector-container">
+            <select class="prestacion-selector">
+                {{#each prestaciones}}
+                    <option class="prestacion-option" value="{{this.id}}" data-establecimiento={{this.establecimiento.id}}> {{this.servicio.descripcion}} en {{this.establecimiento.denominacion}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div class="comunidad-selector-container">
+            <h2 id="comunidadSeleccionadaTexto"></h2>
+            <div class="comunidad-select-container">
+                <select class="comunidad-selector">
+                        {{#each comunidades}}
+                            <option class="comunidad-option" value="{{this.id}}">{{this.nombre}}</option>
+                        {{/each}}
+                </select>
+                <div class="uno linea-blanca"></div>
+                <div class="dos linea-blanca"></div>
+            </div>
+        </div>
+
+        {{#each comunidades}}
+            {{#each this.establecimientosObservados}}
+                <div
+                    class="establecimientos-de-comunidad"
+                    data-establecimiento="{{this.id}}"
+                    data-comunidad="{{../id}}"
+                ></div>
+            {{/each}}
+        {{/each}}
+    </div>
+
+    <div class="separador"></div>
+
+    <div class="seccion-nuevo-incidente">
+
+            <h3>Nuevo incidente</h3>
+            <div class="form">
+                <input type="text" id="denominacion" name="denominacion" placeholder="Denominacion" required>
+                <br>
+                <label for="observaciones">Observaciones</label>
+                <textarea style="font-family: 'Cabin'" id="observaciones" name="observaciones" required></textarea>
+
+                <button id="botonCrear">Publicar Incidente</button>
+            </div>
+    </div>
+
+<script src="../js/crearIncidente.js"></script>
+<script src="../js/cerrarSesion.js"></script>
+<script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/estiloChatty.css">
+    <link rel="stylesheet" href="styles/listarIncidentes.css">
+        <meta charset="utf-8">
+    <title>Carga masiva</title>
+  </head>
+  
+  <body class="bodyInterno centrado">
+
+    <!-- HEADER -->
+    <header>
+        <div class="menu-container">
+            <ul class="menu">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li> <a href="perfilPersona.html"> Configuración </a></li>
+            <li class="paginaActual"><a href="listarIncidentes.html">Incidentes</a></li>
+            <li><a href="listarComunidades.html">Comunidades</a></li>
+            <li><a href="rankings.html">Ranking</a></li>
+            </ul>
+            <img src="img/logo.png" alt="logo-header">
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion-selectores">
+            <div class="estado-selector-container">
+                <select class="estado-selector">
+                    <option value="abierto">Abierto</option>
+                    <option value="cerrado">Cerrado</option>
+                </select>
+            </div>
+
+            <div class="comunidad-selector-container">
+                <h2>Comunidad X</h2>
+
+                <div class="comunidad-select-container">
+                    <select class="comunidad-selector">
+                        <option value="Comunidad X">Comunidad X</option>
+                        <option value="Comunidad Y">Comunidad Y</option>
+                        <option value="Comunidad Z">Comunidad Z</option>
+                    </select>
+                    <div class="uno linea-blanca"></div>
+                    <div class="dos linea-blanca"></div>
+                </div>
+            </div>
+        </section>
+            
+        <div class="separador"></div>
+
+        <div class="seccion-tarjetas">
+            <!-- Las tarjetas se repiten aquí -->
+            <div class="tarjeta">
+                Denominación: <span class="denominacion">XXXX</span><br>
+                Prestación: <span class="prestacion">XXXX</span><br>
+                Horario de publicación: XXXX<br>
+                Observaciones: XXXX
+                <button class="btn-close">X</button>
+            </div>
+            <div class="tarjeta">
+                Denominación: <span class="denominacion">XXXX</span><br>
+                Prestación: <span class="prestacion">XXXX</span><br>
+                Horario de publicación: XXXX<br>
+                Observaciones: XXXX
+                <button class="btn-close">X</button>
+            </div>
+            <div class="tarjeta">
+                Denominación: <span class="denominacion">XXXX</span><br>
+                Prestación: <span class="prestacion">XXXX</span><br>
+                Horario de publicación: XXXX<br>
+                Observaciones: XXXX
+                <button class="btn-close">X</button>
+            </div>
+            <div class="tarjeta">
+                Denominación: <span class="denominacion">XXXX</span><br>
+                Prestación: <span class="prestacion">XXXX</span><br>
+                Horario de publicación: XXXX<br>
+                Observaciones: XXXX
+                <button class="btn-close">X</button>
+            </div>
+            <!-- Repite div tarjeta para más tarjetas -->
+        </div>
+        <a href="crearIncidente.html" class="btn-add">+</a>
+    </main>
+</body>
+</html>

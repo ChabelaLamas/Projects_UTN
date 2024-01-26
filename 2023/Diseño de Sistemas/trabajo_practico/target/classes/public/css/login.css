@@ -1,0 +1,214 @@
+/* Fuentes */
+@font-face {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/ABeeZee/ABeeZee-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf');
+}
+
+/*intentando hacerlo responsive*/
+
+
+@media (max-width: 767px) {
+    .logo_container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo_container img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .input_container,
+    .seleccionTipo {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center; /* Centra horizontalmente el texto */
+        margin: 0 auto;
+    }
+
+    .input_container input,
+    .login_container button,
+    .botonTelefonoYMail {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .login_container h2 {
+        font-size: 3rem;
+    }
+
+    .texto2 {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center; /* Centra horizontalmente el texto */
+        margin: 0 auto;
+
+    }
+
+}
+/*intentando hacerlo responsive*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo_container {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_container img {
+    width: 100%;
+}
+
+.login_container h2 {
+    color: #7E7B7B;
+    font-family: 'Cabin';
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.login_container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_container {
+    border-bottom: 2px solid #BEBEBE;
+    margin-top: 2rem;
+}
+
+.input_container input {
+    width: 27rem;
+    padding: .2rem;
+    font-family: 'Cabin';
+    color: black;
+    font-size: 16px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.login_container button {
+    align-items: flex-start;
+    background-color: #0CC0DF;
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Cabin';
+    font-size: 20px;
+    font-weight: 500;
+    gap: 10px;
+    padding: 10px 239px;
+    backdrop-filter: blur(2px);
+    margin-top: 5rem;
+}
+
+
+
+
+.login_container .botonTelefonoYMail {
+
+    flex-shrink: 0;
+    border-radius: 0px;
+    align-items: flex-start;
+    background: #BEBEBE;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Cabin';
+    font-size: 18px;
+    font-weight: 100;
+
+    display: inline-block;
+    margin-right: 10px;
+
+
+    gap: 10px;
+
+    padding: 10px 100px;
+
+    backdrop-filter: blur(2px);
+    transition: background-color 0.3s ease;
+
+}
+
+
+.login_container .textoBotonCrear{
+
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Cabin';
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+.texto2 {
+    color: #0CC0DF;
+    font-family: Cabin;
+    font-size: 1,5vw;
+    font-weight: 100;
+    margin-right: 10px;
+}
+
+
+/* Botones */
+.activo {
+    background: #0CC0DF !important;
+}
+
+button:hover {
+    background: #06697a;
+}
+
+.error-message {
+    color: red;
+    border: 1px solid red;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error_login {
+    color: red;
+    border: 1px solid red;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}

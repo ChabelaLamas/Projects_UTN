@@ -1,0 +1,29 @@
+/* Agrega estos estilos a tu archivo de estilo (listarEstablecimientos.css) o donde sea que estés manejando los estilos */
+.listado {
+    border: 1px solid #ddd; /* Borde del contenedor de la comunidad */
+    padding: 1%; /* Porcentaje del ancho del contenedor como padding */
+    margin-bottom: 1%; /* Porcentaje del ancho del contenedor como margen inferior */
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 3%; /* Porcentaje del ancho del contenedor como radio de borde */
+    overflow: hidden; /* Evitar que los elementos floten fuera del contenedor */
+    position: relative; /* Establecer posición relativa para alinear el ícono de eliminación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.letraListado {
+    color: #656464;
+    font-size: 1.75vw; /* Tamaño de fuente en viewport width */
+    margin-bottom: 1%; /* Porcentaje del ancho del contenedor como margen inferior */
+}
+
+.editar {
+    color: #FF4DB5;
+    font-family: ABeeZee;
+    font-size: 1.5vw;
+    text-decoration: none;
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}

@@ -1,0 +1,13 @@
+domain\apis\georef\GeorefServiceTest.class
+csv\ImportadorCSVTest.class
+db\ContextTest.class
+validadorDeContrasenias\CumpleComplejidadTest.class
+validadorDeContrasenias\CumpleLongitudTest.class
+domain\main\RankeadorTest.class
+domain\main\NotificacionesTest.class
+domain\apis\fusionComunidades\FusionComunidadesTest.class
+validadorDeContrasenias\NoEsComunTest.class
+domain\main\IncidentesTest.class
+validadorDeContrasenias\CredencialesPorDefectoTest.class
+validadorDeContrasenias\ValidezContraseniaTest.class
+validadorDeContrasenias\EncriptadorTest.class

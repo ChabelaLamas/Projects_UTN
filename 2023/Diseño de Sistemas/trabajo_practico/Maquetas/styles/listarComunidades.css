@@ -1,0 +1,91 @@
+/* Fuentes */
+@font-face {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/ABeeZee/ABeeZee-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf');
+}
+
+body {
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.comunidad {
+    background: #D9D9D9;
+    width: 30%;
+    margin: 2% auto;
+    text-align: center;
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Alinear el contenido verticalmente */
+    justify-content: center; /* Centrar verticalmente el contenido */
+    height: 90px; /* Aumentar la altura según tus necesidades */
+}
+
+
+
+.letraComunidad {
+    color: #7E7B7B;
+    font-family: ABeeZee;
+    font-size: 3vw; /* Usar % de ancho de la ventana */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.unirseAComunidad {
+    position: fixed;  /* Esto hace que el botón permanezca en una posición fija en la pantalla. */
+    bottom: 10px;     /* 20px desde la parte inferior de la pantalla. */
+    right: 10px;      /* 20px desde la parte derecha de la pantalla. */
+    padding: 10px 20px; /* Espaciado interno del botón. */
+    background-color: #0CC0DF; /* Color celeste de fondo. */
+    color: #FFFFFF;  /* Color de texto blanco. */
+    border: none;    /* Sin borde. */
+    border-radius: 5px; /* Bordes ligeramente redondeados. */
+    cursor: pointer; /* Cambio de cursor a mano al pasar el mouse. */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil. */
+    font-size: 25px; /* Tamaño de letra. */
+    z-index: 1000;   /* Asegurarse de que aparezca por encima de otros elementos. */
+    font-family: ABeeZee;
+}
+
+
+
+.texto {
+    color: #FFF;
+    font-family: Cabin;
+    padding: 0%;
+    font-size: 70px;
+    align-items: center;
+}
+
+
+@media (min-width: 768px) {
+    .comunidad {
+        width: 600px;
+        flex-direction: row;
+        text-align: center;
+        margin-bottom: 20px;
+    } 
+
+    .letraComunidad {
+        margin-right: 20px;
+        margin-bottom: 0;
+        width: auto;
+        text-align: center;
+    }
+
+   
+}

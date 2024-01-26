@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/estiloGeneral.css">
+    <link rel="stylesheet" href="css/cargaMasiva.css">
+    <meta charset="utf-8">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Carga masiva</title>
+  </head>
+
+  <body class="bodyInterno centrado">
+
+     <!-- HEADER -->
+      <header>
+            <div class="menu-container">
+              <ul class="menu">
+                 {{#each menus}}
+                     {{#if this.activo}}
+                        <li class="paginaActual"><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                     {{else}}
+                        <li><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                     {{/if}}
+                 {{/each}}
+              </ul>
+              <img src="img/logo.png" alt="logo-header">
+
+            </div>
+            <a href="#" id="cerrarSesionLink">
+                  <div class="cerrar-sesion-icon">
+                    <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+                  </div>
+            </a>
+      </header>
+
+      <div>
+        <h1 class="titulosMedianos">Añadir entidades prestadoras y organismos de control</h1>
+      </div>
+
+      <div>
+        <h2 class="cargaMasiva">Selecciona un archivo con formato CSV para la carga de datos</h2>
+        <div class="cargaMasivaDiv">
+          <img id="csv-icon" src="img/cargaCSV.png" alt="CSV Icon">
+          <span id="csv-filename">ejemplo.csv</span>
+        </div>
+
+      </div>
+
+      <form action="/carga-masiva" method="POST" enctype="multipart/form-data" id="csvForm">
+          <input type="file" name="csvfile" accept=".csv" id="csvfile" style="display: none;">
+          <button type="button" class="boton cargarDatos" onclick="document.getElementById('csvfile').click();">Seleccionar Archivo</button>
+          <button type="submit" class="boton cargarDatos" id="submitButton" disabled>Subir Datos</button>
+      </form>
+
+       <div class="error-container">
+            <p id="error-message">Por favor, selecciona un archivo CSV válido.</p>
+       </div>
+
+      <!-- MENSAJE DE ERROR -->
+      {{#if errorMessage}}
+          <div class="error-message">
+            {{errorMessage}}
+          </div>
+      {{/if}}
+
+      {{#if happyMessage}}
+          <div class="happy-message">
+            {{happyMessage}}
+          </div>
+     {{/if}}
+
+
+
+      <h2 class ="idk">Cada línea del archivo debe tener los siguientes campos separados por comas:</h2>
+      <div class="formatoCargaMasiva">
+        <h3>Denominacion</h3>
+        <h3>Tipo (Entidad prestadora/Organismo de control)</h3>
+        <h3>Nombre del delegado</h3>
+        <h3>Email del delegado</h3>
+      </div>
+    <script src="js/cargaMasiva.js"></script>
+    <script src="js/cerrarSesion.js"></script>
+    <script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>

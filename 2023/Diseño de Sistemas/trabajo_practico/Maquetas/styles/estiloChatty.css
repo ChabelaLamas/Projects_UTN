@@ -1,0 +1,166 @@
+/* Fuentes */
+@font-face {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/ABeeZee/ABeeZee-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf');
+}
+
+/* (<a>) */
+a {
+    text-decoration: none; 
+    color: inherit;
+    font-weight: inherit; 
+}
+
+/* Body */
+.bodyInterno {
+    background: #F3F3F3;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background-color: #f4f4f4;
+    display: flex;
+    font-family: 'Cabin';
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Botones */
+.boton {
+    margin: 16px;
+    background-color: #0CC0DF;
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Cabin';
+    font-size: 20px;
+    font-weight: 500;
+    gap: 10px;
+    padding: 1% 5%;
+    backdrop-filter: blur(2px);
+    flex-direction: row; /* Establecer la dirección de flex a "row" */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 30vw;
+}
+
+
+.botonTipo {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.botonTipo.activo {
+    background-color: #0CC0DF;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #06697a;
+}
+
+
+
+/* Crear Usuario */
+.crearUsuario {
+    color: #0CC0DF;
+    font-family: 'Cabin';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+
+/* Etiquetas e Inputs */
+h2 {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+label,
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Página Actual */
+.paginaActual {
+    color: #0CC0DF;
+    font-family: 'Cabin';
+    font-weight: 500;
+}
+
+/* Títulos */
+.titulosGrandes {
+    color: #7E7B7B;
+    font-family: 'Cabin';
+    font-size: 7vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+
+}
+
+.titulosMedianos {
+    color: #7E7B7B;
+    font-family: 'Cabin';
+    font-size: 4vw;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+
+@media (min-width: 768px) {
+    
+
+    .titulosGrandes {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+
+    }
+
+    
+
+}
+
+.submit {
+    padding: 10px 20px; /* Añade un relleno al botón */
+    font-size: 16px; /* Tamaño de fuente base */
+    width: 10vw; 
+}

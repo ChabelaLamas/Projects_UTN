@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloGeneral.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/crearEstablecimientos.css">
+    <meta charset="utf-8">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <title> Administrar </title>
+</head>
+<body class="bodyInterno centrado">
+<header>
+    <div class="menu-container">
+        <ul class="menu">
+                    {{#each menus}}
+                        {{#if this.activo}}
+                            <li class="paginaActual"><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{else}}
+                            <li><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{/if}}
+                    {{/each}}
+        </ul>
+        <img src="../img/logo.png" alt="logo-header">
+    </div>
+    <a href="#" id="cerrarSesionLink">
+          <div class="cerrar-sesion-icon">
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+          </div>
+    </a>
+
+    <a href="#" id="atrasLink">
+              <div class="atras-icon">
+                <i class="fa-solid fa-arrow-left" style="color: #ff4db5;"></i>
+              </div>
+    </a>
+
+
+</header>
+
+<div>
+        <h1 class="titulosMedianos">Crear Entidad</h1>
+    </div>
+
+    <form id="formCrear">
+        <label for="denominacion">Denominación:</label>
+        <input type="text" id="denominacion" required>
+
+        <label for="tipo">Tipo de Entidad:</label>
+        <input type="text" id="tipoEntidad" required>
+
+        <label for="tipo">Tipo de Establecimiento:</label>
+        <input type="text" id="tipoEstablecimiento" required>
+
+        <label for="entidadPrestadora">Entidad Prestadora:</label>
+        <select id="entidadPrestadora" required>
+            {{#each entidadesPrestadoras}}
+                <option value="{{this.id}}">{{this.denominacion}}</option>
+            {{/each}}
+        </select>
+
+        <button type="button" onclick="guardarEntidad()">Guardar</button>
+    </form>
+
+<script src="../js/crearEntidad.js"></script>
+<script src="../js/cerrarSesion.js"></script>
+<script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+</body>
+</html>

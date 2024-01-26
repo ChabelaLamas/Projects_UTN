@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/estiloGeneral.css">
+    <link rel="stylesheet" href="../css/rankingPuntual.css">
+    <meta charset="utf-8">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <title>Ranking</title>
+</head>
+
+<body class="bodyInterno centrado">
+
+<!-- HEADER -->
+<header>
+    <div class="menu-container">
+        <ul class="menu">
+                    {{#each menus}}
+                        {{#if this.activo}}
+                            <li class="paginaActual"><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{else}}
+                            <li><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{/if}}
+                    {{/each}}
+        </ul>
+        <img src="../img/logo.png" alt="logo-header">
+    </div>
+    <a href="#" id="cerrarSesionLink">
+          <div class="cerrar-sesion-icon">
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+          </div>
+        </a>
+</header>
+
+<div>
+    <h1 class="titulosMedianos"> Ranking {{id}} </h1>
+    <h2 class="titulosMedianito"> {{descripcion}} </h2>
+
+
+     <div class="ranking-container">
+         <ol class="ranking-list">
+             {{#each ranking}}
+                 <li class="ranking-item">{{this}}</li>
+             {{/each}}
+         </ol>
+     </div>
+<!--
+    <a href="../exportados/{{nombreArchivo}}" download>
+        <button class="btn-descargar">Descargar Reporte</button>
+    </a>
+-->
+
+</div>
+
+<script src="../js/cerrarSesion.js"></script>
+<script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+</body>
+</html>

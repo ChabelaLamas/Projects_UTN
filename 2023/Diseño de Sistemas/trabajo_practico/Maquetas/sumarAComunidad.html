@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/estiloChatty.css" />
+    <link rel="stylesheet" href="styles/sumarAComunidad.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <title>Nueva Comunidad</title>
+    
+  </head>
+  <body class="bodyInterno centrado">
+
+  <!-- HEADER -->
+  <header >
+      <div class="menu-container" >
+        <ul class="menu" >
+          <li><a href="inicio.html">Inicio</a></li>
+          <li> <a href="perfilPersona.html"> Configuración </a></li>
+          <li><a href="listarIncidentes.html">Incidentes</a></li>
+          <li class="paginaActual"><a href="listarComunidades.html">Comunidades</a></li>
+          <li><a href="rankings.html">Ranking</a></li>
+        </ul>
+        <img src="img/logo.png" alt="logo-header">
+      </div>
+</header>
+
+<div>
+  <h1 class="titulosMedianos">Nombre Usuario X</h1>
+</div>
+    <div class="container2" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+      <div class="select-box">
+        <div class="options-container" >
+          <div class="option" data-description="Servicios de interés: " data-description1="Establecimientos de interés:">
+            <label>Comunidad 1</label>
+          </div>
+
+          <div class="option" data-description="Servicios de interés:" data-description1="Establecimientos de interés:">
+            
+            <label >Comunidad 2</label>
+          </div>
+
+          <div class="option" data-description="Servicios de interés:" data-description1="Establecimientos de interés:">
+            
+            <label >Comunidad 3</label>
+          </div>
+
+          <div class="option"data-description="Servicios de interés:" data-description1="Establecimientos de interés:">
+            <label >Comunidad 4</label>
+          </div>
+
+          <div class="option"data-description="Servicios de interés:" data-description1="Establecimientos de interés:">
+            <label >Comunidad 5</label>
+          </div>
+
+        </div>
+
+        <div class="selected" style="background: #0CC0DF;">
+          Seleccione una comunidad para sumarse
+        </div>
+        
+        
+      </div>
+      <div class="description">
+          
+      </div>
+     <div class="seleccionTipo">
+        <button id="botonObservador" class="botonOyA"  onclick="seleccionarTipo('observador')">Observador</button>
+        <button id="botonAfectado" class="botonOyA" onclick="seleccionarTipo('afectado')" style="background: #BEBEBE;">Afectado</button>
+    </div> 
+    
+    
+    <button class="boton botonUnir">Unirse</button>
+
+    </div>
+    
+    <script src="js/sumarAComunidad.js"></script>
+  </body>
+</html>

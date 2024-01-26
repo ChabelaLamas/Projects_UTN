@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <div class="logo_container">
+        <img class="logo" src="img/logo.png" alt="logo-header">
+    </div>
+
+    <div class="login_container">
+        <h2>Crear Usuario</h2>
+        <form method="POST" onsubmit="return validarFormulario();" action="login.html">
+            <div class="input_container">
+                <input id="campoNombreUsuario" type="text" placeholder="Nombre de usuario">
+            </div>
+            <div class="input_container">
+                <input id="campoContrasena" type="password" placeholder="Contraseña">
+            </div>
+            <div class="seleccionTipo" id="grupo">
+                <button id="botonCorreo" class="botonTelefonoYMail activo" onclick="seleccionarTipo('correo')" type="button">Email</button>
+                <button id="botonTelefono" class="botonTelefonoYMail" onclick="seleccionarTipo('telefono')" type="button">Teléfono</button>
+            </div>
+
+            <div class="input_container">
+                <input type="text" id="campoTelefonoYMail" placeholder="Correo electrónico" class="miniheader" >
+            </div>
+
+            <button type="submit" class="boton posicionBotonIniciarSesion">
+                Crear
+            </button>
+        </form>
+
+    </div>
+    <script src="js/inicioSesion.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloGeneral.css">
+    <link rel="stylesheet" href="../css/sumarComunidad.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cargaMasiva.css">
+    <meta charset="utf-8">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <title>Nueva Comunidad</title>
+</head>
+<body class="bodyInterno centrado">
+<header>
+    <div class="menu-container">
+        <ul class="menu">
+                    {{#each menus}}
+                        {{#if this.activo}}
+                            <li class="paginaActual"><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{else}}
+                            <li><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{/if}}
+                    {{/each}}
+        </ul>
+        <img src="../img/logo.png" alt="logo-header">
+    </div>
+    <a href="#" id="cerrarSesionLink">
+          <div class="cerrar-sesion-icon">
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+          </div>
+    </a>
+    <a href="#" id="atrasLink">
+          <div class="atras-icon">
+            <i class="fa-solid fa-arrow-left" style="color: #ff4db5;"></i>
+          </div>
+    </a>
+</header>
+
+<div>
+    <h1 class="titulosMedianos">{{usuario.nombre}}</h1>
+</div>
+
+<div class="container2" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+    <div class="select-box">
+        <div class="options-container">
+            {{#each comunidades}}
+                <div class="option" id = "botonComunidad" data-comunidad-id="{{this.id}}" onclick="seleccionarComunidad('{{this.id}}')" data-description="Servicios de interés: {{this.servicios}}" data-description1="Establecimientos de interés: {{this.establecimientos}}">
+                    <label>{{this.nombre}}</label>
+                </div>
+            {{/each}}
+        </div>
+
+
+        <div class="selected" style="background: #0CC0DF;">
+            Seleccione una comunidad para unirse
+        </div>
+
+    </div>
+    <div class="description">
+    </div>
+
+<div class="seleccionTipo">
+    <div id="botonObservador" class="botonOyA" onclick="seleccionarTipo('observador')">Observador</div>
+    <div id="botonAfectado" class="botonOyA" onclick="seleccionarTipo('afectado')">Afectado</div>
+</div>
+
+<form action="/comunidades/sumar" method="post" id="joinForm">
+    <input type="hidden" name="comunidad_id" id="selectedComunidad">
+    <input type="hidden" name="tipo" id="selectedTipo">
+    <input type="submit" class="boton cargarDatos" value="Unirse">
+</form>
+
+
+<script src="../js/sumarAComunidad.js"></script>
+<script src="../js/cerrarSesion.js"></script>
+<script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+</body>
+</html>

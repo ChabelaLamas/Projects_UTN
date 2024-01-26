@@ -1,0 +1,132 @@
+/* Encabezado */
+header {
+    background-color: #FFF;
+    margin: 0;
+    padding: 5px 0; 
+    text-align: center;
+    height: auto; 
+}
+
+
+
+header img {
+    margin: auto 0;
+    padding: 0;
+    display: inline-block; 
+    vertical-align: middle; 
+    width: 22%;
+}
+
+
+/* Pantallas pequeñas */
+@media screen and (max-width: 630px) {
+    header img {
+        width: 40%;  /* Reducido un poco */
+    }
+
+    header {
+        height: auto;  /* Cambiado a auto para permitir que el contenido dicte la altura */
+    }
+}
+
+@media screen and (min-width: 620px) and (max-width: 1023px) {
+    header img {
+        width: 20%;  /* Reducido un poco */
+    }
+}
+
+/* Menú */
+.menu {
+    color: #767676;
+    display: inline;
+    font-family: 'Cabin';
+    font-size: 20px;  /* Reducido el tamaño de fuente */
+    font-weight: 400;
+}
+
+.menu-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0; /* Asegúrate de que no haya relleno adicional */
+}
+
+.menu li {
+    display: inline;
+    margin-right: 50px;  /* Reducido el margen derecho */
+    padding: 0;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Miniheader */
+.miniheader {
+    color: hsl(0, 2%, 61%);
+    font-family: 'Cabin';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#showNotification {
+    position: absolute;
+    top:30px;
+    left:20px;
+    padding: 5px 10px;
+    background-color: #0CC0DF;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width:100px
+}
+
+.notification {
+    display: flex;
+    position: fixed;
+    top: -100px; 
+    transition: top 1s;
+    position: fixed;
+    top: -100px; /* Posición inicial fuera de la vista */
+    transition: top 1s; /* Animación para que aparezca y desaparezca en 1 segundo */
+    position: absolute;
+    align-content: center;
+    padding: 10px;
+    background-color: #0CC0DF;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    left:50%;
+    z-index: 1;
+}
+
+#notificationPopup.show {
+    top: 15px;
+}
+
+#notificationText {
+    margin: auto;
+}
+
+.close-btn {
+    display: inline-block; /* Changed from block to inline-block */
+    padding: 0 10px; /* Added padding to give it space */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    vertical-align: middle; /* Align with text */
+    margin-left: 10px; /* Give it some space from the notification text */
+    transition: color 0.3s; /* Transition effect for hover */
+    width: 40px;
+    margin: auto;
+}
+
+.cerrarSesion {
+    left: 10%;
+}

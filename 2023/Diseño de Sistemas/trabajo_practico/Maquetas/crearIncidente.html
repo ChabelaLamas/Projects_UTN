@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/estiloChatty.css">
+    <link rel="stylesheet" href="styles/crearIncidente.css">
+        <meta charset="utf-8">
+    <title>Nuevo Incidente</title>
+    </head>
+<body class="bodyInterno centrado">
+
+    <!-- HEADER -->
+    <header>
+        <div class="menu-container">
+            <ul class="menu">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li> <a href="perfilPersona.html"> Configuración </a></li>
+            <li class="paginaActual"><a href="#">Incidentes</a></li>
+            <li><a href="listarComunidades.html">Comunidades</a></li>
+            <li><a href="rankings.html">Ranking</a></li>
+            </ul>
+            <li><a href="rankings.html">Cerrar Sesión</a></li>
+            <img src="img/logo.png" alt="logo-header">
+        </div>
+
+        <div class="notification" id="notificationPopup">
+            <p id="notificationText">This is a notification!</p>
+            <button class="close-btn" id="closeNotification">×</button>
+        </div>
+
+        <button id="showNotification">Show Notification</button>
+        <script src="js/notificacion.js"></script>
+    </header>
+
+    <main>
+        <section class="seccion-selectores">
+            <div class="servicio-selector-container">
+                <select class="servicio-selector">
+                    <option value="abierto">Servicio1</option>
+                    <option value="cerrado">Servicio2</option>
+                </select>
+            </div>
+
+            <div class="comunidad-selector-container">
+                <h2>Comunidad X</h2>
+
+                <div class="comunidad-select-container">
+                    <select class="comunidad-selector">
+                        <option value="Comunidad X">Comunidad X</option>
+                        <option value="Comunidad Y">Comunidad Y</option>
+                        <option value="Comunidad Z">Comunidad Z</option>
+                    </select>
+                    <div class="uno linea-blanca"></div>
+                    <div class="dos linea-blanca"></div>
+                </div>
+            </div>
+        </section>
+            
+        <div class="separador"></div>
+
+        <div class="seccion-nuevo-incidente">
+            <form>
+                <h3>Nuevo incidente</h3>
+                <input type="text" id="prestacion" placeholder="Prestación">
+                
+                <input type="text" id="denominacion" placeholder="Denominación">
+                
+                <label for="observaciones">Observaciones</label>
+                <textarea id="observaciones"></textarea>
+                
+                <button>Publicar Incidente</button>
+            </form>>
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href='{% static "css/header.css" %}'>
+        <link rel="stylesheet" href='{% static "css/estiloGeneral.css" %}'>
+        <link rel="stylesheet" href='{% static "css/listarIncidentes.css" %}'>
+
+        <link rel="icon" href='{%static "img/favicon.png" %}' type="image/png">
+        <title>Listado de Incidentes</title>
+    </head>
+    
+
+<body class="bodyInterno centrado">
+
+        <!-- HEADER -->
+<header>
+    <div class="menu-container">
+        <ul class="menu">
+        <li><a>Inicio</a></li>
+        <li> <a> Configuración </a></li>
+        <li class="paginaActual"><a>Incidentes</a></li>
+        <li><a>Comunidades</a></li>
+        <li><a>Ranking</a></li>
+        </ul>
+        <img src='{% static "img/logo.png" %}' alt="logo-header">
+
+    </div>
+    <a id="cerrarSesionLink">
+          <div class="cerrar-sesion-icon">
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+          </div>
+        </a>
+</header>
+
+<div class="seccion-selectores">
+    <div class="estado-selector-container">
+        <select class="estado-selector" id="estado-selector">
+            <option value="AMBOS" selected>Ambos</option>
+            <option value="ABIERTO">Abierto</option>
+            <option value="CERRADO">Cerrado</option>
+        </select>
+    </div>
+
+    <div class="comunidad-selector-container">
+        <h2 id="comunidadSeleccionadaTexto">Incidentes</h2>
+        <div class="comunidad-select-container">
+            <div class="uno linea-blanca"></div>
+            <div class="dos linea-blanca"></div>
+        </div>
+    </div>
+</div>
+
+<div class="separador"></div>
+
+<div class="seccion-tarjetas">
+    {% if incidentes %}
+        {% for incidente in incidentes %}
+            <div class = "incidente" >
+                 Denominación: <span  class="denominacion">{{ incidente.denominacion }}</span><br>
+                 Prestación: <span class="prestacion"> {{ incidente.prestacion_de_servicio.servicio.descripcion }} en {{ incidente.prestacion_de_servicio.establecimiento.denominacion }}
+                 de {{ incidente.prestacion_de_servicio.establecimiento.entidad.denominacion }} </span><br>
+                 Fecha de publicación: <span class="fechaApertura">{{ incidente.fechaapertura }}</span><br>
+                 Observaciones: <span class="observaciones">{{ incidente.observaciones }}</span><br>
+
+                 {% if incidente.abierto %}
+                    Estado: <span class="estado">ABIERTO</span>
+                 {% else %}
+                    Estado: <span class="estado">CERRADO</span>
+                {% endif %}
+                 <button class="btn-close">X</button>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<a class="btn-add">+</a>
+
+
+<script src='{% static "js/listarIncidentes.js" %}'> </script> 
+
+<script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

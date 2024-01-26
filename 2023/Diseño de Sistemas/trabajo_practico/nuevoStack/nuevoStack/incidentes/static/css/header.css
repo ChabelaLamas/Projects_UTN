@@ -1,0 +1,142 @@
+a {
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+a:hover {
+    text-decoration: none; /* Elimina el subrayado en el efecto :hover */
+}
+
+.cerrar-sesion-icon {
+    width: 7%; /* El ancho se ajusta al 4% del ancho de la ventana */
+    max-width: 50px;
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    position: absolute;
+    bottom: 1%; /* Ajusta la distancia desde la parte inferior en relación con el alto de la ventana */
+    right: 1.5%; /* Ajusta la distancia desde la derecha en relación con el ancho de la ventana */
+    top: 14%; /* Ajusta la distancia desde la parte superior en relación con el alto de la ventana */
+}
+
+.atras-icon {
+    width: 7%; /* El ancho se ajusta al 4% del ancho de la ventana */
+    max-width: 50px;
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    position: absolute;
+    bottom: 1%; /* Ajusta la distancia desde la parte inferior en relación con el alto de la ventana */
+    left: 1.5%; /* Ajusta la distancia desde la derecha en relación con el ancho de la ventana */
+    top: 14%; /* Ajusta la distancia desde la parte superior en relación con el alto de la ventana */
+}
+
+@media screen and (max-width: 768px) {
+    .cerrar-sesion-icon {
+        width: 8%; /* Ajusta el tamaño para pantallas más pequeñas */
+        bottom: 2%; /* Ajusta la posición para pantallas más pequeñas */
+        right: 1.5%; /* Ajusta la distancia desde la derecha en relación con el ancho de la ventana */
+        top: 16%;/
+    }
+}
+
+
+
+
+/* Encabezado */
+header {
+    background-color: #FFF;
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+    height: auto;
+}
+
+
+
+header img {
+    margin: auto 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 22%;
+}
+
+
+/* Pantallas pequeñas */
+@media screen and (max-width: 630px) {
+    header img {
+        width: 40%;  /* Reducido un poco */
+    }
+
+    header {
+        height: auto;  /* Cambiado a auto para permitir que el contenido dicte la altura */
+    }
+}
+
+@media screen and (min-width: 620px) and (max-width: 1023px) {
+    header img {
+        width: 20%;  /* Reducido un poco */
+    }
+}
+
+/* Menú */
+.menu {
+    color: #767676;
+    display: inline;
+    font-family: 'Cabin';
+    font-size: 15px;  /* Reducido el tamaño de fuente */
+    font-weight: 400;
+}
+
+.menu-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0; /* Asegúrate de que no haya relleno adicional */
+}
+
+.menu li {
+    display: inline;
+    margin-right: 50px;  /* Reducido el margen derecho */
+    padding: 0;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Miniheader */
+.miniheader {
+    color: hsl(0, 2%, 61%);
+    font-family: 'Cabin';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.cerrarSesion {
+    color: #767676;
+    display: inline;
+    font-family: 'Cabin';
+    font-size: 15px;
+    font-weight: 400;
+
+    display: inline;
+    margin-left: 21%;
+    padding: 0;
+}
+
+.cerrarSesion {
+    color: #FF2199;
+    font-family: 'Cabin', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+
+}
+
+
+.cerrarSesion a:hover {
+    text-decoration: underline;
+}

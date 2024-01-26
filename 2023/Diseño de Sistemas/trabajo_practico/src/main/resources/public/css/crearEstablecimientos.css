@@ -1,0 +1,149 @@
+
+#formCrear {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#formCrear h1,
+#formCrear label,
+#formCrear input,
+#formCrear select {
+    font-family: 'Cabin';
+    font-size: 1rem;
+    color: #7E7B7B;
+}
+
+#formCrear h1 {
+    color: #7E7B7B;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+#formCrear label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+#formCrear input,
+#formCrear select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+#denominacion,
+#tipoEntidad,
+#tipoEstablecimiento {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+#formCrear input:focus,
+#formCrear select:focus {
+    outline: none;
+    border-color: #0CC0DF;
+}
+
+#formCrear button {
+    background-color: #0CC0DF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#formCrear button:hover {
+    background-color: #06697a;
+}
+
+/* Estilos específicos para el selector de opciones */
+.select-box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.select-box .options-container {
+    background: #0CC0DF;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .option,
+.selected {
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 1.2rem;
+
+}
+
+.select-box .option:hover,
+.selected {
+    background: #089ab4;
+    color: #fff;
+}
+
+.select-box .options-container.active .option:hover,
+.select-box .option.selected {
+    background: #0CC0DF;
+    color: #fff;
+}
+
+.selected {
+    background-color: #0CC0DF;
+    color: #fff;
+}
+
+/* Botones específicos para la sección */
+.botonEstablecimiento {
+    margin: 16px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #0CC0DF;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Cabin';
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: inline-block;
+    padding: 12px 24px;
+    transition: background-color 0.3s ease;
+
+}
+
+.botonEstablecimiento:hover {
+    background-color: #076c7e;
+}
+
+.botonEstablecimiento:active {
+    background-color: #043844;
+}

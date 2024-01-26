@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../css/estiloGeneral.css">
+    <link rel="stylesheet" href="../css/perfilPersona.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <title>Editar Mi Perfil</title>
+</head>
+
+<body class="bodyInterno centrado">
+
+<!-- HEADER -->
+<header>
+    <div class="menu-container" style="margin-left: 52px">
+        <ul class="menu">
+                    {{#each menus}}
+                        {{#if this.activo}}
+                            <li class="paginaActual"><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{else}}
+                            <li><a href="{{this.link}}"> {{this.nombre}} </a></li>
+                        {{/if}}
+                    {{/each}}
+        </ul>
+        <img src="../img/logo.png" alt="logo-header">
+    </div>
+
+    <a href="#" id="cerrarSesionLink">
+      <div class="cerrar-sesion-icon">
+        <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff4db5;"></i>
+      </div>
+    </a>
+</header>
+
+<div class="sostenedor_de_campos">
+    <form method="POST" action="/perfil">
+    <div class="campo" data-campo="nombre">
+        <label for="nombre">Nombre:</label>
+        <div class="campo-editable">
+             <input type="nombre" class="input-text" name="nombre" value="{{persona.usuario.nombre}}" id="nombre" >
+        </div>
+    </div>
+
+    <div class="campo" data-campo="email">
+        <label for="email">Email:</label>
+        <div class="campo-editable">
+             <input type="email" class="input-text"name="email" value="{{persona.email}}" id="email" >
+        </div>
+    </div>
+
+    <div class="campo" data-campo="telefono">
+        <label for="telefono">Teléfono:</label>
+        <div class="campo-editable">
+             <input type="telefono" class="input-text"name="telefono" value="{{persona.telefono}}" id="telefono" >
+        </div>
+    </div>
+        <div class="campo" data-campo="provincia">
+            <label for="provincia">Provincia:</label>
+            <div class="campo-editable">
+                <select class="input-select" name="provincia" id="provincia_select">
+                    {{#each provincias}}
+                        <option value="{{this.id}}">{{this.nombre}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+
+        <div class="campo" data-campo="localidad">
+            <label for="localidad">Localidad:</label>
+            <div class="campo-editable">
+                <select class="input-select" name="localidad" id="localidad_select">
+                    {{#each localidades}}
+                        <option value="{{this.id}}" data-provincia="{{this.localizacion.provincia.id}}">{{this.nombre}} - {{this.localizacion.nombre}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="boton cargarDatos" id="botonGuardar" >Guardar</button> <!-- TODO Faltaria un cartel q diga q los cambios se guardaron bien -->
+
+    </form>
+
+</div>
+
+<div class="sostenedor_de_botones">
+    <p>Elige la forma de recibir notificaciones</p>
+    <div class="grupo" id="grupo1">
+        <button class="boton_seleccionador" data-campo="medioNotificacion" data-valor="WHATSAPP">Telefono</button>
+        <button class="boton_seleccionador" data-campo="medioNotificacion" data-valor="EMAIL">Email</button>
+    </div>
+    <div class="grupo" id="grupo2">
+        <button class="boton_seleccionador" data-campo="frecuenciaNotificacion" data-valor="CUANDO_SUCEDE">Cuando sucede</button>
+        <button class="boton_seleccionador" data-campo="frecuenciaNotificacion" data-valor="SIN_APURO">Sin apuros</button>
+    </div>
+
+    <p style="margin-top: 25px;" id="parrafo">Horarios para recibir notificaciones sin apuros</p>
+    <div class="horarios-container">
+        <div class="horarios-seleccionados"></div>
+        <button class="add-btn" onclick="toggleDropdown()">
+            +
+            <div class="dropdown">
+                <div class="dropdown-content" id="dropdown-content">
+
+                </div>
+            </div>
+        </button>
+    </div>
+    <button onclick="guardarHorarios()" class="boton cargarDatos">Guardar Horarios</button>
+
+</div>
+
+
+<script src="https://kit.fontawesome.com/a39dd266ae.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/editarPerfil.js"></script>
+<script src="../js/cerrarSesion.js"></script>
+
+</body>
+</html>

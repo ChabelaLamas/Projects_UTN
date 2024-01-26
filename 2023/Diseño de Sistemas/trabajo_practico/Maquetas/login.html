@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Iniciar Sesion</title>
+</head>
+<body>
+    <div class="logo_container">
+        <img class="logo" src="img/logo.png" alt="logo-header">
+    </div>
+    <div class="login_container">
+        <h2>Iniciar Sesión</h2>
+        <form method="POST" onsubmit="return validarFormularioInicio()" action="inicio.html">
+            <div class="input_container">
+                <input id="usuarioInput" type="text" placeholder="Usuario" required>
+            </div>
+            <div class="input_container">
+                <input id="contraseniaInput" type="password" placeholder="Contraseña" required>
+            </div>
+            
+            <button type="submit" class="boton posicionBotonIniciarSesion">
+                Iniciar Sesión
+            </button>
+            
+        </form>
+
+        <a class="texto2" href="singup.html">* Crear usuario</a>
+    </div>
+    <script src="js/inicioSesion.js"></script>
+</body>
+</html>

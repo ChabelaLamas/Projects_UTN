@@ -1,0 +1,161 @@
+/* Fuentes */
+@font-face {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/ABeeZee/ABeeZee-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf');
+}
+
+
+/* Estilos generales para contenedores */
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Estilos para el título de carga masiva */
+.cargaMasiva {
+    color: #767676;
+    text-align: center;
+    font-family: 'Cabin';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Estilos para el contenedor de carga masiva */
+.formatoCargaMasiva {
+    border-radius: 30px;
+    margin-top: 2%;
+    background: #D9D9D9;
+    color: #767676;
+    text-align: center;
+    font-family: ABeeZee;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 80%; /* Ajusta el ancho del contenedor */
+    margin: 2% auto; /* Centra horizontalmente */
+    padding: 20px; /* Aumenta el espacio interno */
+}
+
+/* Estilos para el texto "No sé qué poner aquí" */
+.idk {
+    color: #767676;
+    margin-top: 2%;
+}
+
+/* Estilos para el contenedor de la carga masiva */
+.cargaMasivaDiv {
+    border: 2px solid #BEBEBE;
+    background: #FFF;
+    width: 80%; /* Ajusta el ancho del contenedor */
+    margin: 2% auto; /* Centra horizontalmente */
+    padding: 10px; /* Aumenta el espacio interno */
+    text-align: center;
+    overflow: hidden;
+    color: #767676;
+}
+
+/* Estilos para el contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.error-container{
+    text-align: center;
+    justify-content: center;
+    color: #0CC0DF;
+}
+
+/* Estilos para mensajes de error o éxito */
+.happy-message {
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 80%; /* Ajusta el ancho del contenedor */
+    margin: 2% auto; /* Centra horizontalmente */
+    padding: 10px; /* Aumenta el espacio interno */
+    justify-content: center;
+    color: mediumseagreen;
+}
+
+.error-message{
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 80%; /* Ajusta el ancho del contenedor */
+    margin: 2% auto; /* Centra horizontalmente */
+    padding: 10px; /* Aumenta el espacio interno */
+    justify-content: center;
+    color: orangered;
+}
+
+.boton.cargarDatos {
+    display: block;
+    margin: 10px auto; /* Centra horizontalmente con "auto" */
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.boton.crearAdmin {
+    display: block;
+    margin: 10px auto; /* Centra horizontalmente con "auto" */
+    padding: 5px 10px;
+    text-align: center;
+    background-color: #2C3E50;
+}
+
+
+
+
+
+/* Estilos para los íconos y nombres de archivos */
+#cargaMasivaDiv, #csv-filename {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#csv-filename {
+    font-style: italic;
+    color: #888;
+    margin-left: 10px; /* Espacio entre el ícono y el nombre del archivo */
+}
+
+#csv-icon {
+    width: 24px; /* Ajusta el tamaño según lo que necesites */
+    height: 24px;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .formatoCargaMasiva {
+        width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+    }
+
+    .cargaMasivaDiv {
+        width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+    }
+}
