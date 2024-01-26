@@ -10,7 +10,7 @@
 <p>
    Welcome to my software development project repository! Here, you'll discover a compilation of projects I've undertaken, both independently and collaboratively, during my academic journey in Information Systems Engineering at Universidad Tecnológica Nacional, Facultad Regional Buenos Aires (UTN FRBA).
 </p>
-<p>The utilized programming languages are the following: C++, C, Haskell, Wollok, Prolog, HTML, CSS.</p>
+<p>The utilized programming languages are the following: C++, C, Haskell, Wollok, Prolog, HTML, CSS, Java.</p>
 
 <!-- Visual Representation -->
 <p align="center">
@@ -30,7 +30,7 @@ Exploration of various programming paradigms through exercises and hands-on impl
 
 Throughout these projects, I've acquired valuable experience in:
 
-- Utilizing various technologies including C++, C, Haskell, Wollok, Prolog, HTML, and CSS.
+- Utilizing various technologies including C++, C, Haskell, Wollok, Prolog, HTML, Java and CSS.
 - Navigating complex problem-solving scenarios.
 - Collaborating effectively within development teams.
 - Applying Object-Oriented Programming (OOP) principles, encompassing polymorphism, inheritance, encapsulation, composition, and abstraction.
