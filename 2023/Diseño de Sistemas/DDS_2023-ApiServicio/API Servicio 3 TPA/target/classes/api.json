@@ -1,0 +1,135 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API Ranking",
+    "description": "Servicio para obtencion del ranking",
+    "version": "1.0"
+  },
+  "paths": {
+    "/RankingImpactoIncidentes/GenerarRanking": {
+      "post": {
+        "tags": [
+          "Ranking"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RequestEntidadDTO"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Obtener el ranking de entidades",
+        "operationId": "RankingImpactoIncidentes",
+        "responses": {
+          "500": {
+            "description": "Error del servidor"
+          },
+          "503": {
+            "description": "Servicio no disponible"
+          },
+          "200": {
+            "description": "Generacion exitosa",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ResponseEntidadDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RankingImpactoIncidentes/CambiarCnf/{nuevoCnf}": {
+      "post": {
+        "tags": ["Configuracion"],
+        "parameters": [
+          {
+            "name": "nuevoCnf",
+            "in": "path",
+            "description": "El CNF a utilizar",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Error del servidor"
+          },
+          "503": {
+            "description": "Servicio no disponible"
+          },
+          "200": {
+            "description": "Descripcion exitosa"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RequestEntidadDTO": {
+        "required": [
+          "idEntidad",
+          "sumatoriaTiemposResolucion",
+          "cantidadIncidentesNoResueltos",
+          "coeficienteIncidentesNoResueltos",
+          "cantidadMiembrosAfectados"
+        ],
+        "type": "object",
+        "properties": {
+          "idEntidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sumatoriaTiemposResolucion": {
+            "type": "integer"
+          },
+          "cantidadIncidentesNoResueltos": {
+            "type": "integer"
+          },
+          "coeficienteIncidentesNoResueltos": {
+            "type": "integer"
+          },
+          "cantidadMiembrosAfectados": {
+            "type": "integer"
+          }
+        }
+      },
+      "ResponseEntidadDTO": {
+        "required": [
+          "idEntidad",
+          "nivelImpactoEntidad",
+          "puestoRanking"
+        ],
+        "type": "object",
+        "properties": {
+          "idEntidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nivelImpactoEntidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "puestoRanking": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    }
+  }
+}

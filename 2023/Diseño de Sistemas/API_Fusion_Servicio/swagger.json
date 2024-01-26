@@ -1,0 +1,115 @@
+{
+  "openapi" : "3.0.0",
+  "servers" : [ {
+    "description" : "SwaggerHub API Auto Mocking",
+    "url" : "https://virtserver.swaggerhub.com/LSANGRONI/API_Fusion_Comunidades/1.0.0"
+  } ],
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "API_Fusion_Comunidades",
+    "description" : "API para fusionar comunidades en sistema de monitoreo de estado de servicios de transporte público y de establecimientos."
+  },
+  "paths" : {
+    "/" : {
+      "post" : {
+        "tags" : [ "Fusionar y recibir sugerencias" ],
+        "description" : "Devuelve las comunidades fusionadas y sugerencias de nuevas fusiones",
+        "requestBody" : {
+          "required" : true,
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PayloadDTO"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Todo ok",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/PayloadDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "PayloadDTO" : {
+        "type" : "object",
+        "properties" : {
+          "comunidades" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/Comunidad"
+            }
+          },
+          "fusiones" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/Fusion"
+            }
+          }
+        }
+      },
+      "Comunidad" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "idEstablecimientosObservados" : {
+            "type" : "array",
+            "items" : {
+              "type" : "integer"
+            }
+          },
+          "idServiciosObservados" : {
+            "type" : "array",
+            "items" : {
+              "type" : "integer"
+            }
+          },
+          "gradoDeConfianza" : {
+            "type" : "integer"
+          },
+          "idMiembros" : {
+            "type" : "array",
+            "items" : {
+              "type" : "integer"
+            }
+          },
+          "estado" : {
+            "type" : "string",
+            "enum" : [ "ACTIVADA", "DESACTIVADA" ]
+          }
+        }
+      },
+      "Fusion" : {
+        "type" : "object",
+        "properties" : {
+          "estado" : {
+            "type" : "string",
+            "enum" : [ "PROPUESTA", "ACEPTADA", "RECHAZADA" ]
+          },
+          "comunidad1" : {
+            "$ref" : "#/components/schemas/Comunidad"
+          },
+          "comunidad2" : {
+            "$ref" : "#/components/schemas/Comunidad"
+          },
+          "fechaCreada" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      }
+    }
+  }
+}

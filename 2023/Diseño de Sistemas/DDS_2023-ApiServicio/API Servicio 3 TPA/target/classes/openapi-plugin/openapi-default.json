@@ -1,0 +1,139 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "",
+    "version": ""
+  },
+  "paths": {
+    "/RankingImpactoIncidentes/CambiarCNF/{nuevoCnf}": {
+      "post": {
+        "tags": [
+          "Ranking"
+        ],
+        "summary": "Establecer un nuevo CNF",
+        "operationId": "ConfigurarCnf",
+        "parameters": [
+          {
+            "name": "nuevoCnf",
+            "in": "path",
+            "description": "El nuevo CNF a utilizar",
+            "required": true,
+            "deprecated": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "string": {}
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/RankingImpactoIncidentes/GenerarRanking": {
+      "post": {
+        "tags": [
+          "Ranking"
+        ],
+        "summary": "Obtener ranking inicidentes",
+        "operationId": "RankingImpactoIncidentes",
+        "parameters": [],
+        "requestBody": {
+          "description": "Servicio que recibe informacion de los incidentes de cada entidad y genera un rankingde las entidades cuyos incidentes tuvieron el mayor impacto.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RequestEntidadDTO"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ResponseEntidadDTO"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RequestEntidadDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "idEntidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sumatoriaTiemposResolucion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidadIncidentesNoResueltos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidadMiembrosAfectados": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ResponseEntidadDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "idEntidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nivelImpactoEntidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "puestoRanking": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    }
+  }
+}
