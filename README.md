@@ -14,7 +14,7 @@
 
 <!-- Visual Representation -->
 <p align="center">
-    <img src="https://today.cofc.edu/wp-content/uploads/2019/08/SystemsEngineering-slider-01-copy.jpg" alt="Software Development Projects">
+    <img src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/003/452/original/System_Engineer.png?1655390520" alt="Software Development Projects">
 
 </p>
 
