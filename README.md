@@ -1,7 +1,7 @@
 # Projects_UTN
 <!-- Last Updated Note -->
 <p align="right">
-    <em>Last updated: January 26, 2024</em>
+    <em>Last updated: February 25, 2024</em>
 </p>
 
 <!-- Header -->
