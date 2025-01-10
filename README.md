@@ -1,7 +1,7 @@
 # Projects_UTN
 <!-- Last Updated Note -->
 <p align="right">
-    <em>Last updated: February 25, 2024</em>
+    <em>Last updated: January 10, 2024</em>
 </p>
 
 <!-- Header -->
@@ -10,7 +10,7 @@
 <p>
    Welcome to my software development project repository! Here, you'll discover a compilation of projects I've undertaken, both independently and collaboratively, during my academic journey in Information Systems Engineering at Universidad Tecnológica Nacional, Facultad Regional Buenos Aires (UTN FRBA).
 </p>
-<p>The utilized programming languages are the following: C++, C, Haskell, Wollok, Prolog, HTML, CSS, SQL, Java.</p>
+<p>The utilized programming languages are the following: C++, C, Haskell, Wollok, Prolog, HTML, CSS, SQL, Java, Python.</p>
 
 <!-- Visual Representation -->
 <p align="center">
@@ -29,15 +29,19 @@ Exploration of various programming paradigms through exercises and hands-on impl
 ### <a href="https://github.com/ChabelaLamas/Projects_UTN/tree/main/2023/Dise%C3%B1o%20de%20Sistemas">Accessible Transport and Establishment Monitoring System<a>
 This project is a support system for communities with reduced mobility, offering real-time monitoring of public transport services and establishments. The backend is developed in Java, while the frontend is built using JavaScript and CSS. We utilize MySQL as our database service, with Hibernate providing object-relational mapping. The system includes an API that communicates with both internal components and external services. This project aims to enhance accessibility and improve the mobility experience for individuals with reduced mobility.
 
+### <a href="https://github.com/ChabelaLamas/Projects_UTN/tree/main/2024/Simulaci%C3%B3n">Zomato Delivery System Simulation<a>
+This project simulates the behavior of Zomato's delivery system to analyze delivery trends based on two factors: the day of the week and the time of day. By examining patterns in delivery volumes and efficiency across different days and identifying peak and off-peak periods, the simulation provides valuable insights for optimizing operations. Built using Python, the project includes dynamic modeling, customizable parameters, and data visualization.
+
 ## 🧠 Lessons Learned
 
 Throughout these projects, I've acquired valuable experience in:
 
-- Utilizing various technologies including C++, C, Haskell, Wollok, Prolog, HTML, Java, SQL and CSS.
+- Utilizing various technologies including C++, C, Haskell, Wollok, Prolog, HTML, Java, Python, SQL and CSS.
 - Navigating complex problem-solving scenarios.
 - Collaborating effectively within development teams.
 - Applying Object-Oriented Programming (OOP) principles, encompassing polymorphism, inheritance, encapsulation, composition, and abstraction.
 - Embracing both the functional and logical programming paradigms.
+- Adapting systems to dynamic environments.
 - Conducting comprehensive unit testing.
 
 ## 📬 Contact
