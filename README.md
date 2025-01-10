@@ -1,7 +1,7 @@
 # Projects_UTN
 <!-- Last Updated Note -->
 <p align="right">
-    <em>Last updated: September 2, 2023</em>
+    <em>Last updated: February 25, 2024</em>
 </p>
 
 <!-- Header -->
@@ -10,7 +10,7 @@
 <p>
    Welcome to my software development project repository! Here, you'll discover a compilation of projects I've undertaken, both independently and collaboratively, during my academic journey in Information Systems Engineering at Universidad Tecnológica Nacional, Facultad Regional Buenos Aires (UTN FRBA).
 </p>
-<p>The utilized programming languages are the following: C++, C, Haskell, Wollok, Prolog, HTML, CSS, Java.</p>
+<p>The utilized programming languages are the following: C++, C, Haskell, Wollok, Prolog, HTML, CSS, SQL, Java.</p>
 
 <!-- Visual Representation -->
 <p align="center">
@@ -26,11 +26,14 @@ The project entails a system comprising five interconnected modules connected th
 ### <a href="https://github.com/ChabelaLamas/Projects_UTN/tree/main/2022/Paradigmas%20de%20Programacion">OOP, Functional and Logical paradigm<a>
 Exploration of various programming paradigms through exercises and hands-on implementations, which provided me with a profound insight into how each paradigm tackles problem-solving and software design
 
+### <a href="https://github.com/ChabelaLamas/Projects_UTN/tree/main/2023/Dise%C3%B1o%20de%20Sistemas">Accessible Transport and Establishment Monitoring System<a>
+This project is a support system for communities with reduced mobility, offering real-time monitoring of public transport services and establishments. The backend is developed in Java, while the frontend is built using JavaScript and CSS. We utilize MySQL as our database service, with Hibernate providing object-relational mapping. The system includes an API that communicates with both internal components and external services. This project aims to enhance accessibility and improve the mobility experience for individuals with reduced mobility.
+
 ## 🧠 Lessons Learned
 
 Throughout these projects, I've acquired valuable experience in:
 
-- Utilizing various technologies including C++, C, Haskell, Wollok, Prolog, HTML, Java and CSS.
+- Utilizing various technologies including C++, C, Haskell, Wollok, Prolog, HTML, Java, SQL and CSS.
 - Navigating complex problem-solving scenarios.
 - Collaborating effectively within development teams.
 - Applying Object-Oriented Programming (OOP) principles, encompassing polymorphism, inheritance, encapsulation, composition, and abstraction.
